@@ -6,9 +6,12 @@ public class PumicForm : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("water"))
+        if (CompareTag("Pumice"))
         {
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = -.5f;
+            if (collision.gameObject.CompareTag("water"))
+            {
+                gameObject.GetComponent<Rigidbody2D>().gravityScale = -.5f;
+            }
         }
     }
 

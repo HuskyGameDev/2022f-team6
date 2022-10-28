@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 288220158}
   m_Layer: 0
   m_Name: Square (2)
-  m_TagString: ground
+  m_TagString: water
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1546,7 +1546,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minScale: 1
-  normScale: 2
+  normScale: 3
+  changeTimer: 1
 --- !u!114 &3195147049152657521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1602,8 +1603,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   jumpStrength: 5
-  maxJumps: 10
-  isGrounded: 0
+  maxJumps: 100
+  jumpTimer: 0.1
 --- !u!61 &3195147049152657525
 BoxCollider2D:
   m_ObjectHideFlags: 0

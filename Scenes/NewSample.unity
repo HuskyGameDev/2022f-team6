@@ -1561,6 +1561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 3195147049152657515}
+  gold: {fileID: 21300000, guid: 052b0a3f56ec3b148895788fe3a3c903, type: 3}
 --- !u!114 &3195147049152657522
 MonoBehaviour:
   m_ObjectHideFlags: 0

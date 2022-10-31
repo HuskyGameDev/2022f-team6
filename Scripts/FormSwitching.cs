@@ -7,9 +7,16 @@ using UnityEngine;
 public class FormSwitching : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    bool inGold = false;
-    bool inPum = false;
-    public Sprite gold;
+    public bool inGold = false;
+    public bool inPum = false;
+    public bool inQuartz = false;
+
+    //get all the sprites
+    [SerializeField] Sprite basic;
+    [SerializeField] Sprite gold;
+    [SerializeField] Sprite goldSquish;
+    [SerializeField] Sprite quartz;
+    [SerializeField] Sprite pumice;
 
     private SpriteRenderer sr;
     /**KEY
@@ -41,18 +48,42 @@ public class FormSwitching : MonoBehaviour
             inGold = false;
             Debug.Log("Gold = " + inGold);
 
+            //changes sprite
+            sr.sprite = basic;
         }
         if(Input.GetKeyDown(KeyCode.Alpha2) && !inPum)
         {
             player.tag = "Pumice";
             inPum = true;
+
+            //changes sprite
+            sr.sprite = pumice;
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2) && inPum)
         {
             player.tag = "Player";
             inPum = false;
+
+            //changes sprite
+            sr.sprite = basic;
         }
-   
+
+        //handles changing in/out of quartz form
+        if (Input.GetKeyDown(KeyCode.Alpha3) && !inQuartz)
+        {
+            player.tag = "Quartz";
+            inQuartz = true;
+
+            //changes sprite
+            sr.sprite = quartz;
+        } else if (Input.GetKeyDown(KeyCode.Alpha3) && inQuartz)
+        {
+            player.tag = "Player";
+            inQuartz = false;
+
+            //changes sprite
+            sr.sprite = basic;
+        }
     }
 }

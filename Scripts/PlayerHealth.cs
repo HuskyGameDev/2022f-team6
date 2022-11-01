@@ -6,10 +6,6 @@ public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] int maxHp = 3;
 
-    //used to move the player in a direction when they hit an enemy
-    [SerializeField] float xOffset = 0;
-    [SerializeField] float yOffset = 0;
-
     private int currentHp = 0;
 
     // Start is called before the first frame update
@@ -23,7 +19,6 @@ public class PlayerHealth : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             currentHp--;
-            gameObject.transform.position += new Vector3(xOffset, yOffset);
         } else if(collision.gameObject.CompareTag("Heal") && currentHp < maxHp)
         {
             currentHp++;

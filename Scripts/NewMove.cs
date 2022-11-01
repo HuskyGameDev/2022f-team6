@@ -6,6 +6,7 @@ public class NewMove : MonoBehaviour
 {
     //these are meant to be edited in the unity editor, tweak them as you please
     [SerializeField] float speed = 1;
+    [SerializeField] float maxSpeed = 1;
     [SerializeField] float jumpStrength = 1;
     [SerializeField] float maxJumps = 1;
     [SerializeField] float jumpTimer = 1f;
@@ -23,12 +24,25 @@ public class NewMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //attempts to limit speed, I think a Vector2.ClampMagnitude would be useful somewhere idk tho
+        if(Mathf.Abs(rb.velocity.x) > maxSpeed)
+            {
+            if (Input.GetAxis("Horizontal") > 0)
+            {
+                rb.velocity = new Vector2(maxSpeed, rb.velocity.y);
+            }
+            else if (Input.GetAxis("Horizontal") < 0)
+            {
+                rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
+            }
+        } else 
+
         //this timer is to prevent "multi jumps" since this is a frame based movement without a timer you can get multiple
         //jumps in at a time and it creates some weird/unpredictible behavior
         currentJumpTimer -= Time.fixedDeltaTime;
 
         //handles horizontal movement
-        rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
+        rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0), ForceMode2D.Impulse);
 
         //handles jumps by adding force when key is clicked and starting a timer (as well as keeping track of jumps)
         if (Input.GetAxis("Jump") > 0 && isGrounded && maxJumps > currentJumps && currentJumpTimer <= 0)

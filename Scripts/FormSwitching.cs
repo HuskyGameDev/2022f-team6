@@ -23,20 +23,22 @@ public class FormSwitching : MonoBehaviour
         {
             player.tag = "Gold";
             inGold = true;
-            Debug.Log("Gold = " + inGold);
+            inPum = false;
         }
         //if the 1 key is pressed while the player is in gold form the tag becomes player
         else if (Input.GetKeyDown(KeyCode.Alpha1) && inGold)
         {
             player.tag = "Player";
             inGold = false;
-            Debug.Log("Gold = " + inGold);
+          
 
         }
         if(Input.GetKeyDown(KeyCode.Alpha2) && !inPum)
         {
             player.tag = "Pumice";
             inPum = true;
+            inGold = false;
+
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2) && inPum)

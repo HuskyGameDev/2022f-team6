@@ -22,27 +22,22 @@ public class NewMove : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        //attempts to limit speed, I think a Vector2.ClampMagnitude would be useful somewhere idk tho
-        if(Mathf.Abs(rb.velocity.x) > maxSpeed)
-            {
-            if (Input.GetAxis("Horizontal") > 0)
-            {
-                rb.velocity = new Vector2(maxSpeed, rb.velocity.y);
-            }
-            else if (Input.GetAxis("Horizontal") < 0)
-            {
-                rb.velocity = new Vector2(-maxSpeed, rb.velocity.y);
-            }
-        } else 
+        /*
+         * this timer is to prevent "multi jumps" since this is a frame based movement without a timer you can get multiple
+         * jumps in at a time and it creates some weird/unpredictible behavior (get weird flight without this)
+        */
+        currentJumpTimer -= Time.deltaTime;
 
-        //this timer is to prevent "multi jumps" since this is a frame based movement without a timer you can get multiple
-        //jumps in at a time and it creates some weird/unpredictible behavior
-        currentJumpTimer -= Time.fixedDeltaTime;
-
-        //handles horizontal movement
-        rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0), ForceMode2D.Impulse);
+        //handles horizontal movement (the if statments are to cap move speeds)
+        if (rb.velocity.x > -maxSpeed && Input.GetAxis("Horizontal") < 0)
+        {
+            rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
+        } else if (rb.velocity.x < maxSpeed && Input.GetAxis("Horizontal") > 0)
+        {
+            rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
+        }
 
         //handles jumps by adding force when key is clicked and starting a timer (as well as keeping track of jumps)
         if (Input.GetAxis("Jump") > 0 && isGrounded && maxJumps > currentJumps && currentJumpTimer <= 0)

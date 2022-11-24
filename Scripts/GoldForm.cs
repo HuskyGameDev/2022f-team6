@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class GoldForm : MonoBehaviour
 {
+    //set these in the unity editor
     [SerializeField] float minScale = 1f;
     [SerializeField] float normScale = 2f;
     [SerializeField] float changeTimer = 1f;
 
+    //grab this from an object in the editor mode
     [SerializeField]  FormSwitching formSwitch;
 
+    //some variables used to keep track of things
     private float currentTimer = 0f;
     private bool isShrunk = false;
 
     private void FixedUpdate()
     {
+        //ticks the timer down at a constant rate
         currentTimer -= Time.fixedDeltaTime;
     }
 
@@ -26,7 +30,7 @@ public class GoldForm : MonoBehaviour
 
     private void Update()
     {
-        //let the player manually change size
+        //let the player manually change size (auto switches to normal size when exiting gold form)
         if(Input.GetKeyDown(KeyCode.F) && currentTimer <= 0 && formSwitch.inGold)
         {
             if(isShrunk)
@@ -35,54 +39,16 @@ public class GoldForm : MonoBehaviour
                 gameObject.transform.localScale = new Vector3(normScale, normScale, normScale);
 
                 isShrunk = false;
-
-                //sets a timer to prevent rapidly changing back and forth, this should help stop weird behavior
-                currentTimer = changeTimer;
             } else
             {
                 //shrink player
                 gameObject.transform.localScale = new Vector3(minScale, minScale, minScale);
 
                 isShrunk = true;
-
-                //sets a timer to prevent rapidly changing back and forth, this should help stop weird behavior
-                currentTimer = changeTimer;
             }
 
+            //sets a timer to prevent rapidly changing back and forth, this should help stop weird behavior
             currentTimer = changeTimer;
         } else if(!formSwitch.inGold) gameObject.transform.localScale = new Vector3(normScale, normScale, normScale);
     }
-
-    /*
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (CompareTag("Gold") && currentTimer <= 0)
-        {
-            //shrink the player
-            if (collision.gameObject.CompareTag("shrink"))
-            {
-                gameObject.transform.localScale = new Vector3(minScale, minScale, minScale);
-
-                //sets a timer to prevent rapidly changing back and forth, this should help stop weird behavior
-                currentTimer = changeTimer;
-            }
-            else
-
-            //grow the player
-            if (collision.gameObject.CompareTag("grow"))
-            {
-                gameObject.transform.localScale = new Vector3(normScale, normScale, normScale);
-            }
-
-        }
-        else //allows player to grow outside of gold, this prevents them from being trapped small if they change forms
-        {
-            if (collision.gameObject.CompareTag("grow") && currentTimer <= 0)
-            {
-                gameObject.transform.localScale = new Vector3(normScale, normScale, normScale);
-            }
-            Debug.Log("gold not active");
-        }
-    }
-    */
 }

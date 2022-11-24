@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewMove : MonoBehaviour
+public class Move : MonoBehaviour
 {
     //these are meant to be edited in the unity editor, tweak them as you please
     [SerializeField] float speed = 1;

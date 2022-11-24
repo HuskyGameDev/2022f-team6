@@ -7,13 +7,25 @@ using UnityEngine;
 public class FormSwitching : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    bool inGold = false;
-    bool inPum = false;
-   /**KEY
-    1 = GoldForm
-   2 = Pummice form*/
+    public bool inGold = false;
+    public bool inPum = false;
+    /**KEY
+     1 = GoldForm
+    2 = Pummice form*/
 
+    //get all the sprites from the editor
+    [SerializeField] Sprite basic;
+    [SerializeField] Sprite gold;
+    [SerializeField] Sprite goldSquish;
+    [SerializeField] Sprite quartz;
+    [SerializeField] Sprite pumice;
 
+    private SpriteRenderer sr;
+
+    private void Start()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -24,14 +36,18 @@ public class FormSwitching : MonoBehaviour
             player.tag = "Gold";
             inGold = true;
             inPum = false;
+
+            //changes sprite
+            sr.sprite = gold;
         }
         //if the 1 key is pressed while the player is in gold form the tag becomes player
         else if (Input.GetKeyDown(KeyCode.Alpha1) && inGold)
         {
             player.tag = "Player";
             inGold = false;
-          
 
+            //changes sprite
+            sr.sprite = basic;
         }
         if(Input.GetKeyDown(KeyCode.Alpha2) && !inPum)
         {
@@ -39,12 +55,17 @@ public class FormSwitching : MonoBehaviour
             inPum = true;
             inGold = false;
 
+            //changes sprite
+            sr.sprite = pumice;
         }
 
         else if (Input.GetKeyDown(KeyCode.Alpha2) && inPum)
         {
             player.tag = "Player";
             inPum = false;
+
+            //changes sprite
+            sr.sprite = basic;
         }
    
     }

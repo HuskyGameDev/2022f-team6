@@ -4,32 +4,53 @@ using UnityEngine;
 
 public class GoldForm : MonoBehaviour
 {
-    
-    private void OnTriggerEnter2D(Collider2D collision)
+    //set these in the unity editor
+    [SerializeField] float minScale = 1f;
+    [SerializeField] float normScale = 2f;
+    [SerializeField] float changeTimer = 1f;
+
+    //grab this from an object in the editor mode
+    [SerializeField] FormSwitching formSwitch;
+
+    //some variables used to keep track of things
+    private float currentTimer = 0f;
+    private bool isShrunk = false;
+
+    private void FixedUpdate()
     {
-        if (CompareTag("Gold"))
+        //ticks the timer down at a constant rate
+        currentTimer -= Time.fixedDeltaTime;
+    }
+
+    private void Start()
+    {
+        //sets player to correct size on start
+        gameObject.transform.localScale = new Vector3(normScale, normScale, normScale);
+    }
+
+    private void Update()
+    {
+        //let the player manually change size (auto switches to normal size when exiting gold form)
+        if (Input.GetKeyDown(KeyCode.F) && currentTimer <= 0 && formSwitch.inGold)
         {
-            //shrink the player
-            if (collision.gameObject.CompareTag("shrink"))
+            if (isShrunk)
             {
-                gameObject.transform.localScale = new Vector3(.5f, .5f, .5f);
+                //grow player
+                gameObject.transform.localScale = new Vector3(normScale, normScale, normScale);
+
+                isShrunk = false;
             }
             else
+            {
+                //shrink player
+                gameObject.transform.localScale = new Vector3(minScale, minScale, minScale);
 
-            //grow the player
-            if (collision.gameObject.CompareTag("grow"))
-            {
-                gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+                isShrunk = true;
             }
+
+            //sets a timer to prevent rapidly changing back and forth, this should help stop weird behavior
+            currentTimer = changeTimer;
         }
-        else //allows player to grow outside of gold, this prevents them from being trapped small if they change forms
-        {
-            if (collision.gameObject.CompareTag("grow"))
-            {
-                gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
-            }
-            Debug.Log("gold not active");
-        }
+        else if (!formSwitch.inGold) gameObject.transform.localScale = new Vector3(normScale, normScale, normScale);
     }
-    
 }

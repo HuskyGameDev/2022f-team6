@@ -22,13 +22,13 @@ public class Move : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         /*
          * this timer is to prevent "multi jumps" since this is a frame based movement without a timer you can get multiple
          * jumps in at a time and it creates some weird/unpredictible behavior (get weird flight without this)
         */
-        currentJumpTimer -= Time.deltaTime;
+        currentJumpTimer -= Time.fixedDeltaTime;
 
         //handles horizontal movement (the if statments are to cap move speeds)
         if (rb.velocity.x > -maxSpeed && Input.GetAxis("Horizontal") < 0)

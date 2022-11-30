@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     //These are the canvas objects needed for opening menus, note this script should be placed on an object that ISN'T one of these
     [SerializeField] GameObject pauseCanvas;
     [SerializeField] GameObject optionsCanvas;
+    [SerializeField] GameObject playerUI;
 
     private bool isActive = false;
 
@@ -16,7 +17,13 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isActive = !isActive;
+
+            //open or close the pause menu and player ui
             pauseCanvas.SetActive(isActive);
+            playerUI.SetActive(!isActive);
+
+            //always exit options menu
+            optionsCanvas.SetActive(false);
 
             //pauses time (note only time scale so non-time dependent things still work, i.e outside update functions)
             if (isActive)
@@ -34,6 +41,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseCanvas.SetActive(false);
+        playerUI.SetActive(true);
         Time.timeScale = 1;
     }
 

@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class PumiceForm : MonoBehaviour
 {
+    //TODO: probably should integrate this with the form switching script
+
+    private void FixedUpdate()
+    {
+        //if the player exits pumice form set gravity back to normal
+        if(!CompareTag("Pumice"))
+        {
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         //if the player is in pumice mode and coliding with a object tagged water make them float

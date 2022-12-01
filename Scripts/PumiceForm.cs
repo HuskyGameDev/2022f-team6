@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PumiceForm : MonoBehaviour
 {
+    [SerializeField] float normalGravity = 1;
+    [SerializeField] float floatStrength = .5f;
     //TODO: probably should integrate this with the form switching script
 
     private void FixedUpdate()
@@ -11,7 +13,7 @@ public class PumiceForm : MonoBehaviour
         //if the player exits pumice form set gravity back to normal
         if(!CompareTag("Pumice"))
         {
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = normalGravity;
         }
     }
 
@@ -22,7 +24,7 @@ public class PumiceForm : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("water"))
             {
-                gameObject.GetComponent<Rigidbody2D>().gravityScale = -.5f;
+                gameObject.GetComponent<Rigidbody2D>().gravityScale = -floatStrength;
             }
         }
     }
@@ -32,7 +34,7 @@ public class PumiceForm : MonoBehaviour
         //when the player exits a water object make gravity normal (disables floating)
         if (collision.gameObject.CompareTag("water"))
         {
-            gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+            gameObject.GetComponent<Rigidbody2D>().gravityScale = normalGravity;
         }
     }
 }

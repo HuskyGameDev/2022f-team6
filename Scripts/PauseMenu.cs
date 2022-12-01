@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
     //These are the canvas objects needed for opening menus, note this script should be placed on an object that ISN'T one of these
     [SerializeField] GameObject pauseCanvas;
     [SerializeField] GameObject optionsCanvas;
+    [SerializeField] GameObject levelsCanvas;
     [SerializeField] GameObject playerUI;
 
     private bool isActive = false;
@@ -49,13 +50,27 @@ public class PauseMenu : MonoBehaviour
     //opens up an options menu
     public void Options()
     {
-        pauseCanvas.SetActive(false);
-        optionsCanvas.SetActive(true);
+        loadCanvas(optionsCanvas);
+    }
+
+    public void Levels()
+    {
+        loadCanvas(levelsCanvas);
     }
 
     //exits the game (currently no save features)
     public void Quit()
     {
         Application.Quit();
+    }
+
+    //opens a canvas and closes all others
+    private void loadCanvas(GameObject turnOn)
+    {
+        pauseCanvas.SetActive(false);
+        optionsCanvas.SetActive(false);
+        levelsCanvas.SetActive(false);
+
+        turnOn.SetActive(true);
     }
 }

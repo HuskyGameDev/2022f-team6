@@ -11,6 +11,7 @@ public class BoxPushing : MonoBehaviour
   
     
     [SerializeField] bool inPosition;//true if box is where it should be
+    [SerializeField] GameObject toggleObject;
   
     void Start()
     {
@@ -22,6 +23,7 @@ public class BoxPushing : MonoBehaviour
         if (collision.gameObject.CompareTag("BoxSpot"))
         {
             inPosition = true;
+            toggleObject.SetActive(!toggleObject.activeSelf);
         }
         
     }
@@ -30,6 +32,7 @@ public class BoxPushing : MonoBehaviour
         if (collision.gameObject.CompareTag("BoxSpot"))
         {
             inPosition = false;
+            toggleObject.SetActive(!toggleObject.activeSelf);
         }
     }
     public bool GetInPosition()

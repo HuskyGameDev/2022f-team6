@@ -5,9 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelSwitcher : MonoBehaviour
 {
+    //make sure to give this enough scenes for as many buttons as will ever be pressed
     [SerializeField] string[] sceneNames;
-
-    //contains the methods to load scenes, attach them to buttons in the editor
 
     public void lvl1()
     {

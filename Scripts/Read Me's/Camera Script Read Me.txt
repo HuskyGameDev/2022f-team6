@@ -1,0 +1,4 @@
+The script is attached to the camera
+The variable safeZoneX determines how far to the left or right the player can move before the camera moves
+The variable safeZoneY determines how far up or down the player can move before the camera moves.
+The variable camera catch up speed determines how fast the camera will move when it recenters on the player.

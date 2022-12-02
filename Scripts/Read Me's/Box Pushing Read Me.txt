@@ -1,0 +1,2 @@
+Place the the script onto the box asset.
+The place where the box needs to go must be tagged as BoxSpot.

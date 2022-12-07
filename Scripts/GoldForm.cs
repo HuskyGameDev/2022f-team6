@@ -43,7 +43,8 @@ public class GoldForm : MonoBehaviour
             else
             {
                 //shrink player
-                gameObject.transform.localScale = new Vector3(minScale, minScale, minScale);
+                //normScale for z axis, cause otherwise the player will also switch z axis, which is something we don't want
+                gameObject.transform.localScale = new Vector3(minScale, minScale, normScale);
 
                 isShrunk = true;
             }
@@ -51,6 +52,11 @@ public class GoldForm : MonoBehaviour
             //sets a timer to prevent rapidly changing back and forth, this should help stop weird behavior
             currentTimer = changeTimer;
         }
-        else if (!formSwitch.inGold) gameObject.transform.localScale = new Vector3(normScale, normScale, normScale);
+        else if (!formSwitch.inGold)
+        {
+            gameObject.transform.localScale = new Vector3(normScale, normScale, normScale);
+
+            isShrunk = false;
+        }
     }
 }

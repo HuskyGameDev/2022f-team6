@@ -1,9 +1,0 @@
-[Value Setting]
-	set rigidbody angular/linear drag to 3
-	speed/maxspeed = 10
-	jump strength = 5
-	jump timer = .1
-
-[General Use]
-	need to set ground objects to have the tag "ground" to allow for jump detection to work
-	the script is placed directly onto the player object (whatever has the rigidbody/colliders)

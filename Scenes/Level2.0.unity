@@ -13671,7 +13671,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNames:
   - Surface Level Playtest
-  - Level2
+  - Level2.0
 --- !u!114 &9032401750300319591
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1936,9 +1936,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5131801741057447566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3694f8df689f39449a8b1366197bdb44, type: 3}
+  m_Script: {fileID: 11500000, guid: f986b8f06153fcd40b0386d14e0893e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNames:
-  - Level 0.1
-  - Surface Level Playtest
+  sceneNames: []

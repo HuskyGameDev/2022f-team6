@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bea78f744f76a4b46a7622cd8ab99b11
+guid: 4f83a409affeb3346afb349cb39095a9
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -20,6 +20,7 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
@@ -47,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -63,12 +64,13 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
   cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
+    maxTextureSize: 128
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 0
     compressionQuality: 50
@@ -101,6 +103,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -113,14 +127,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0250cce4a1381f7408879860ce0d0ea4
-      internalID: 1154549926
+      spriteID: 1d721c7874b216644ab55fcb62f05bca
+      internalID: 2031589528
       vertices: []
       indices: 
       edges: []
@@ -134,14 +148,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbd9f394e1bef0c4eb1cac3d8db10d9e
-      internalID: 350281043
+      spriteID: 567e91ee952ddd74fb9cb04e079e76c3
+      internalID: -611791605
       vertices: []
       indices: 
       edges: []
@@ -155,14 +169,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9727e66bea9ece347877658ee0398067
-      internalID: -653518874
+      spriteID: 8cd845d4f1c760c4a9f8ebbd2cbaeb46
+      internalID: -913338145
       vertices: []
       indices: 
       edges: []
@@ -176,14 +190,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbeaa5f35a1bec040aa7cd7593a65803
-      internalID: 922591496
+      spriteID: a159703953d22914c891b29d4c9c13c6
+      internalID: 358944399
       vertices: []
       indices: 
       edges: []
@@ -197,14 +211,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 429dc462581c1be499fbe989b2e9c254
-      internalID: -983120609
+      spriteID: c7c0f3a2edf5bac439fb924e2adab80d
+      internalID: 878439815
       vertices: []
       indices: 
       edges: []
@@ -218,14 +232,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 689061c50fef32246bbcc8f4912acbc2
-      internalID: 1274512969
+      spriteID: 316a947b65d47364faf890b52ab67466
+      internalID: 1823626296
       vertices: []
       indices: 
       edges: []
@@ -239,14 +253,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ddf65ac651fed247937e308eb38346d
-      internalID: 991295046
+      spriteID: 5ec9390910fd5b441bf9ba516e2e9fd0
+      internalID: -2020982085
       vertices: []
       indices: 
       edges: []
@@ -260,14 +274,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1441956ff61ad91498f5d2d62e3304d1
-      internalID: 1050905461
+      spriteID: aef50bbebd9d18243929f3de268d412a
+      internalID: 2080815900
       vertices: []
       indices: 
       edges: []
@@ -281,14 +295,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe5fb5c9f6ae481468695b364ad178aa
-      internalID: -2129473354
+      spriteID: 7b73c3033b4619646815c595c15e1b60
+      internalID: -1876110566
       vertices: []
       indices: 
       edges: []
@@ -302,14 +316,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5e4f148be885c043b0056319e463f1a
-      internalID: -1080311333
+      spriteID: 3f3e3b2d5c603ca4b80f5c7d0d31edfd
+      internalID: -547351107
       vertices: []
       indices: 
       edges: []
@@ -323,14 +337,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d594630c20ac0c44c967c2e579ce599b
-      internalID: -1349335920
+      spriteID: 4e3e3234d0e1b6541b7068a70168b675
+      internalID: -968036236
       vertices: []
       indices: 
       edges: []
@@ -346,20 +360,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Crystal Cave Tile Set_1: 350281043
-      Crystal Cave Tile Set_7: 1050905461
-      Crystal Cave Tile Set_10: -1349335920
-      Crystal Cave Tile Set_8: -2129473354
-      Crystal Cave Tile Set_2: -653518874
-      Crystal Cave Tile Set_5: 1274512969
-      Crystal Cave Tile Set_6: 991295046
-      Crystal Cave Tile Set_9: -1080311333
-      Crystal Cave Tile Set_0: 1154549926
-      Crystal Cave Tile Set_4: -983120609
-      Crystal Cave Tile Set_3: 922591496
+      Crystal Cave Tile Set_1: -611791605
+      Crystal Cave Tile Set_7: 2080815900
+      Crystal Cave Tile Set_10: -968036236
+      Crystal Cave Tile Set_8: -1876110566
+      Crystal Cave Tile Set_2: -913338145
+      Crystal Cave Tile Set_5: 1823626296
+      Crystal Cave Tile Set_6: -2020982085
+      Crystal Cave Tile Set_9: -547351107
+      Crystal Cave Tile Set_0: 2031589528
+      Crystal Cave Tile Set_4: 878439815
+      Crystal Cave Tile Set_3: 358944399
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

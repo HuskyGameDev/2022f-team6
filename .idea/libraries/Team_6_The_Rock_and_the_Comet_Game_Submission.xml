@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Team 6 The Rock and the Comet Game Submission">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Team 6 The Rock and the Comet Game Submission/Game Executable Mac.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Team 6 The Rock and the Comet Game Submission/Game Executable Linux.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Team 6 The Rock and the Comet Game Submission/Game Executable Windows.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

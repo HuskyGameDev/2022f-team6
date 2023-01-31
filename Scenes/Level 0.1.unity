@@ -20908,8 +20908,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 3
-  m_AngularDrag: 3
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -20931,9 +20931,9 @@ GameObject:
   - component: {fileID: 7517575688681192087}
   - component: {fileID: 7517575688681192086}
   - component: {fileID: 7517575688681192081}
-  - component: {fileID: 7517575688681192082}
   - component: {fileID: 7517575688681192080}
   - component: {fileID: 7517575688681192094}
+  - component: {fileID: 7517575688681192095}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -21028,23 +21028,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalGravity: 1
   floatStrength: 0.5
---- !u!114 &7517575688681192082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7517575688681192077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86e1bc0b51733c649b33cf10670354af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
-  maxSpeed: 20
-  jumpStrength: 10
-  maxJumps: 100
-  jumpTimer: 0.1
 --- !u!114 &7517575688681192084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21113,6 +21096,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.2
+--- !u!114 &7517575688681192095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7517575688681192077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e972cb625ec2184dba593689e67d0d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  maxSpeed: 10
+  jumpStrength: 3
+  maxJumps: 100
+  jumpTimer: 0.01
 --- !u!1 &7838197284026276231
 GameObject:
   m_ObjectHideFlags: 0

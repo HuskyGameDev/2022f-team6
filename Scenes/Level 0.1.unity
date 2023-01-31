@@ -21109,10 +21109,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  maxSpeed: 10
-  jumpStrength: 3
+  maxSpeed: 5
+  jumpStrength: 5
   maxJumps: 100
-  jumpTimer: 0.01
+  jumpTimer: 0.2
+  frictionStrength: 5
 --- !u!1 &7838197284026276231
 GameObject:
   m_ObjectHideFlags: 0

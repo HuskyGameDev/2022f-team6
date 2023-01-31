@@ -10,6 +10,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float jumpStrength = 1;
     [SerializeField] float maxJumps = 1;
     [SerializeField] float jumpTimer = 1f;
+    [SerializeField] float frictionStrength = 1f;
 
     //should be safe to ignore these, used by functions below to keep track of various info
     private int currentJumps = 0;
@@ -25,42 +26,41 @@ public class Movement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //allows for coyote jump
         if (!isGrounded)
         {
             currentJumpTimer -= Time.fixedDeltaTime;
         }
-
-        //handles horizontal movement (the if statments are to cap move speeds)
-        if (rb.velocity.x > -maxSpeed && Input.GetAxis("Horizontal") < 0)
+        else if(Input.GetAxis("Horizontal") == 0)
         {
-            rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed, 0), ForceMode2D.Impulse);
-        }
-        else if (rb.velocity.x < maxSpeed && Input.GetAxis("Horizontal") > 0)
-        {
-            rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * Time.fixedDeltaTime * speed, 0), ForceMode2D.Impulse);
+            //if player is on ground slow horizontal movement
+            rb.velocity -= new Vector2(rb.velocity.x * Time.deltaTime * frictionStrength, 0);
         }
 
+        //handles horizontal movement
+        rb.AddForce(new Vector2(Input.GetAxis("Horizontal") * speed, 0));
+        rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -maxSpeed, maxSpeed), rb.velocity.y);
+    }
+
+    private void Update()
+    {
         //handles jumps by adding force when key is clicked and starting a timer (as well as keeping track of jumps)
-        if (Input.GetAxis("Jump") > 0 && maxJumps > currentJumps && currentJumpTimer > 0.0000)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && maxJumps > currentJumps && currentJumpTimer > 0.0000)
         {
             rb.AddForce(new Vector2(0, jumpStrength), ForceMode2D.Impulse);
             currentJumps++;
             currentJumpTimer = jumpTimer;
+            isGrounded = false;
         }
     }
 
-    //resets players jump timer
-    private void OnCollisionStay2D(Collision2D collision)
+    //handles player jump timer with being grounded
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground"))
         {
             currentJumpTimer = jumpTimer;
             isGrounded = true;
         }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        isGrounded = false;
     }
 }

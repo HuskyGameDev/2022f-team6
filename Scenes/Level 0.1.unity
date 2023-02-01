@@ -21056,8 +21056,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14d0285d29b4de48af3ab526730a99b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minScale: 1
-  normScale: 3
+  minScale: 2
+  normScale: 3.5
   changeTimer: 0.3
   formSwitch: {fileID: 7517575688681192087}
 --- !u!114 &7517575688681192087
@@ -21113,6 +21113,7 @@ MonoBehaviour:
   maxSpeed: 5
   jumpStrength: 5
   maxJumps: 100
+  unlimitedJump: 1
   jumpTimer: 0.2
   frictionStrength: 5
   fSwitch: {fileID: 7517575688681192087}

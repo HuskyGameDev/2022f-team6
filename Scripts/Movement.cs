@@ -9,9 +9,9 @@ public class Movement : MonoBehaviour
     [SerializeField] float maxSpeed = 1;
     [SerializeField] float jumpStrength = 1;
     [SerializeField] float maxJumps = 1;
+    [SerializeField] bool unlimitedJump = true;
     [SerializeField] float jumpTimer = 1f;
     [SerializeField] float frictionStrength = 1f;
-    [SerializeField] FormSwitching fSwitch;
 
     //should be safe to ignore these, used by functions below to keep track of various info
     private int currentJumps = 0;
@@ -19,11 +19,16 @@ public class Movement : MonoBehaviour
     private bool isGrounded = false;
     private float currentJumpTimer = 0f;
 
+    //using a setter for this to keep it more contained/traceable
+    public void setGrounded(bool val)
+    {
+        isGrounded = val;
+    }
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
-
 
     private void FixedUpdate()
     {
@@ -32,9 +37,10 @@ public class Movement : MonoBehaviour
         {
             currentJumpTimer -= Time.fixedDeltaTime;
         }
-        else if(Input.GetAxis("Horizontal") == 0)
+
+        //if player isn't attempting to move horizontally apply custom friction
+        else if (Input.GetAxis("Horizontal") == 0)
         {
-            //if player is on ground slow horizontal movement
             rb.velocity -= new Vector2(rb.velocity.x * Time.deltaTime * frictionStrength, 0);
         }
 
@@ -46,7 +52,7 @@ public class Movement : MonoBehaviour
     private void Update()
     {
         //handles jumps by adding force when key is clicked and starting a timer (as well as keeping track of jumps)
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && maxJumps > currentJumps && currentJumpTimer > 0.0000)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded && (maxJumps > currentJumps || unlimitedJump) && currentJumpTimer > 0.0000)
         {
             rb.AddForce(new Vector2(0, jumpStrength), ForceMode2D.Impulse);
             currentJumps++;
@@ -56,9 +62,9 @@ public class Movement : MonoBehaviour
     }
 
     //handles player jump timer with being grounded
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if ((collision.gameObject.CompareTag("ground") || fSwitch.inQuartz) && !isGrounded)
+        if (collision.gameObject.CompareTag("ground"))
         {
             currentJumpTimer = jumpTimer;
             isGrounded = true;

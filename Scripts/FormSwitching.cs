@@ -7,6 +7,7 @@ public class FormSwitching : MonoBehaviour
     [SerializeField] GameObject player;
     public bool inGold = false;
     public bool inPum = false;
+    public bool inQuartz = false;
     /**KEY
      1 = GoldForm
     2 = Pummice form*/
@@ -28,17 +29,17 @@ public class FormSwitching : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if the 1 key is pressed the players tag is set to gold
+        //handles switching to and from gold form
         if (Input.GetKeyDown(KeyCode.Alpha1) && !inGold)
         {
             player.tag = "Gold";
             inGold = true;
             inPum = false;
+            inQuartz = false;
 
             //changes sprite
             sr.sprite = gold;
         }
-        //if the 1 key is pressed while the player is in gold form the tag becomes player
         else if (Input.GetKeyDown(KeyCode.Alpha1) && inGold)
         {
             player.tag = "Player";
@@ -47,16 +48,18 @@ public class FormSwitching : MonoBehaviour
             //changes sprite
             sr.sprite = basic;
         }
+
+        //handles switching to and from pumice form
         if(Input.GetKeyDown(KeyCode.Alpha2) && !inPum)
         {
             player.tag = "Pumice";
             inPum = true;
             inGold = false;
+            inQuartz = false;
 
             //changes sprite
             sr.sprite = pumice;
         }
-
         else if (Input.GetKeyDown(KeyCode.Alpha2) && inPum)
         {
             player.tag = "Player";
@@ -65,6 +68,26 @@ public class FormSwitching : MonoBehaviour
             //changes sprite
             sr.sprite = basic;
         }
-   
+
+        //handles switching to and from quartz form
+        if (Input.GetKeyDown(KeyCode.Alpha3) && !inQuartz)
+        {
+            player.tag = "Quartz";
+            inQuartz = true;
+            inPum = false;
+            inGold = false;
+
+            //changes sprite
+            sr.sprite = quartz;
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3) && inQuartz)
+        {
+            player.tag = "Player";
+            inQuartz = false;
+
+            //changes sprite
+            sr.sprite = basic;
+        }
+
     }
 }

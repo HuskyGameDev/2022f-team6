@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     [SerializeField] float maxJumps = 1;
     [SerializeField] float jumpTimer = 1f;
     [SerializeField] float frictionStrength = 1f;
+    [SerializeField] FormSwitching fSwitch;
 
     //should be safe to ignore these, used by functions below to keep track of various info
     private int currentJumps = 0;
@@ -55,12 +56,18 @@ public class Movement : MonoBehaviour
     }
 
     //handles player jump timer with being grounded
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("ground"))
+        if ((collision.gameObject.CompareTag("ground") || fSwitch.inQuartz) && !isGrounded)
         {
             currentJumpTimer = jumpTimer;
             isGrounded = true;
         }
+    }
+
+    //updates when player is no longer touching an object (has redundancy in jump function incase player is touching an object not tagged with ground)
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = false;
     }
 }

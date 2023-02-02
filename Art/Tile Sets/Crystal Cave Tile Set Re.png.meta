@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f570a49966fad5b4799536dbb60096f0
+guid: 55926a76f21b1044794caf82ffd1ef41
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -68,9 +68,9 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 128
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lava Tile Set_0
+      name: Crystal Cave Tile Set Re_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +119,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdb3efd4c3f53bf49aac9b331e75da35
-      internalID: 283087684
+      spriteID: 75f34e68d0a255d428691efad17f867b
+      internalID: -1128048095
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava Tile Set_1
+      name: Crystal Cave Tile Set Re_1
       rect:
         serializedVersion: 2
         x: 16
@@ -140,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 233526fdacf199745b1b1401123a3b0c
-      internalID: -1507266096
+      spriteID: aef6ef4ddeebde44fba7e8e67851006c
+      internalID: -855449781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava Tile Set_2
+      name: Crystal Cave Tile Set Re_2
       rect:
         serializedVersion: 2
         x: 32
@@ -161,14 +161,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d7f3a97f49fa9a468b299c12b299e4c
-      internalID: -1202397262
+      spriteID: 594f7a58de999c24d9d80c5814943de3
+      internalID: 272949212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava Tile Set_3
+      name: Crystal Cave Tile Set Re_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8041d6f69e91744479798f3a84a62088
+      internalID: 183859866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Cave Tile Set Re_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6b5b2b9216cc243a19f3a64458b3c1
+      internalID: -1414692255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Cave Tile Set Re_5
       rect:
         serializedVersion: 2
         x: 0
@@ -182,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 184362db90d50d24ebbc7a0901019871
-      internalID: 1733815826
+      spriteID: 137c1cf74de822c43af3b19bcd7232a2
+      internalID: -162034590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava Tile Set_4
+      name: Crystal Cave Tile Set Re_6
       rect:
         serializedVersion: 2
         x: 16
@@ -203,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97166c5b8484f1d49b0f1801888a55b9
-      internalID: 1489556984
+      spriteID: 9ee6138a62aa4574b9bb2bb05b100c4e
+      internalID: 722605545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava Tile Set_5
+      name: Crystal Cave Tile Set Re_7
       rect:
         serializedVersion: 2
         x: 32
@@ -224,14 +266,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77f9ccf52cba4e1488273e7c422c357b
-      internalID: 1009593917
+      spriteID: 1487a977845c60748af937d2f62c5602
+      internalID: -1744148678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava Tile Set_6
+      name: Crystal Cave Tile Set Re_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74842d9934f18cf4f9be6efb55bc3c53
+      internalID: 1433653102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Cave Tile Set Re_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee4dec123275bd4683e28709c5498de
+      internalID: 1076964981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crystal Cave Tile Set Re_10
       rect:
         serializedVersion: 2
         x: 0
@@ -245,14 +329,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 809aee3b8602e6349bad6027d87d0161
-      internalID: 677502568
+      spriteID: 0afed13b6d771e04a87dbeb1af87ed7d
+      internalID: 272115870
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava Tile Set_7
+      name: Crystal Cave Tile Set Re_11
       rect:
         serializedVersion: 2
         x: 16
@@ -266,14 +350,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 734d18b80dc75cb488ed2ed5bb632e99
-      internalID: -1667504432
+      spriteID: ebca9e61cf9edbb48a33a7aaefb3d5a9
+      internalID: 648762636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Lava Tile Set_8
+      name: Crystal Cave Tile Set Re_12
       rect:
         serializedVersion: 2
         x: 32
@@ -287,8 +371,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cef72efad3388504b989a34b7d01d461
-      internalID: -142410487
+      spriteID: 7e1776a26ea1eac4a884258082a9c832
+      internalID: 2047163455
       vertices: []
       indices: 
       edges: []
@@ -304,15 +388,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Lava Tile Set_7: -1667504432
-      Lava Tile Set_5: 1009593917
-      Lava Tile Set_4: 1489556984
-      Lava Tile Set_1: -1507266096
-      Lava Tile Set_2: -1202397262
-      Lava Tile Set_8: -142410487
-      Lava Tile Set_6: 677502568
-      Lava Tile Set_3: 1733815826
-      Lava Tile Set_0: 283087684
+      Crystal Cave Tile Set Re_5: -162034590
+      Crystal Cave Tile Set Re_6: 722605545
+      Crystal Cave Tile Set Re_4: -1414692255
+      Crystal Cave Tile Set Re_8: 1433653102
+      Crystal Cave Tile Set Re_10: 272115870
+      Crystal Cave Tile Set Re_11: 648762636
+      Crystal Cave Tile Set Re_3: 183859866
+      Crystal Cave Tile Set Re_0: -1128048095
+      Crystal Cave Tile Set Re_1: -855449781
+      Crystal Cave Tile Set Re_7: -1744148678
+      Crystal Cave Tile Set Re_2: 272949212
+      Crystal Cave Tile Set Re_9: 1076964981
+      Crystal Cave Tile Set Re_12: 2047163455
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -9,8 +9,9 @@ public class FormSwitching : MonoBehaviour
     public bool inPum = false;
     public bool inQuartz = false;
     /**KEY
-     1 = GoldForm
-    2 = Pummice form*/
+     1 = Gold form
+    2 = Pummice form
+    3 = Quartz form */
 
     //get all the sprites from the editor
     [SerializeField] Sprite basic;

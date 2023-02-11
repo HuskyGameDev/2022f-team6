@@ -15,7 +15,9 @@ public class PumiceForm : MonoBehaviour
     //get the move componenet of this game object
     private void Start()
     {
+        //movement is not properly being assigned a value -- causing null reference exceptions
         movement = this.GetComponent<Movement>();
+        Debug.Log(movement);
     }
 
     private void FixedUpdate()

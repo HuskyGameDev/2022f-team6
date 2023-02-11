@@ -5,6 +5,11 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
+
+    //for respawn functionality 
+    private Transform spawnPoint;
+    private Transform playerPos;
+
     //set in editor
     [SerializeField] int maxHp = 3;
 
@@ -20,6 +25,10 @@ public class PlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //finds the object tagged as player and accesses the transform
+        playerPos = GameObject.FindGameObjectWithTag("Player").transform;
+       //finds the object tagged as respawn and accesses the transform
+        spawnPoint = GameObject.FindGameObjectWithTag("Respawn").transform;
         currentHp = maxHp;
     }
 
@@ -47,7 +56,10 @@ public class PlayerHealth : MonoBehaviour
         //checks if the players hp hits zero and destroys the player object if it does
         if (currentHp <= 0)
         {
-            Destroy(gameObject);
+            //respawns player and puts back in the original spawn point
+            currentHp = 3;
+            playerPos.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y, spawnPoint.position.z);
+            //Destroy(gameObject);
         }
     }
 

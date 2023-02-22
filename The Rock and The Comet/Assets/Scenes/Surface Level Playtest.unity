@@ -1638,8 +1638,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 345.8, y: 175.8}
-  m_SizeDelta: {x: 691.6, y: 351.6}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &485981498
 MonoBehaviour:
@@ -2283,9 +2283,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Levels
+      - m_Target: {fileID: 11500000, guid: f986b8f06153fcd40b0386d14e0893e3, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18961,6 +18961,7 @@ GameObject:
   - component: {fileID: 1780634641}
   - component: {fileID: 1780634640}
   - component: {fileID: 1780634639}
+  - component: {fileID: 1780634648}
   - component: {fileID: 1780634638}
   m_Layer: 0
   m_Name: Player
@@ -19181,6 +19182,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1780634648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780634637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e972cb625ec2184dba593689e67d0d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  defaultMaxSpeed: 5
+  jumpStrength: 5
+  maxJumps: 100
+  unlimitedJump: 1
+  jumpTimer: 0.2
+  frictionStrength: 5
 --- !u!1 &1816079992
 GameObject:
   m_ObjectHideFlags: 0

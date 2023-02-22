@@ -34,7 +34,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //check if the player touches an enemy or healing object and performs the appropriate modification to hp
+        //check if the player touches an enemy or healing object or checkpoint and performs the appropriate modification to hp
         if (collision.gameObject.CompareTag("Enemy"))
         {
             currentHp--;
@@ -44,6 +44,11 @@ public class PlayerHealth : MonoBehaviour
             currentHp++;
 
             //destroys the healing object (I'm going under 1x use assumption)
+            Destroy(collision.gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Checkpoint"))
+        {
+            spawnPoint = collision.gameObject.transform;
             Destroy(collision.gameObject);
         }
     }

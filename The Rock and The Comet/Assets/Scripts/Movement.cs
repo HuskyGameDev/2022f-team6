@@ -107,4 +107,29 @@ public class Movement : MonoBehaviour
     {
         isGrounded = false;
     }
+
+    #region use these methods to get information for other scripts
+
+    public bool movingHorizontal()
+    {
+        if (Mathf.Abs(rb.velocity.x) > 0)
+            return true;
+        else
+            return false;
+    }
+
+    public bool movingVerticle()
+    {
+        if (Mathf.Abs(rb.velocity.y) > 0)
+            return true;
+        else
+            return false;
+    }
+
+    public bool checkGrounded()
+    {
+        return isGrounded;
+    }
+
+    #endregion
 }

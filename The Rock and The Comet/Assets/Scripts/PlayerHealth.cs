@@ -49,7 +49,7 @@ public class PlayerHealth : MonoBehaviour
         else if (collision.gameObject.CompareTag("Checkpoint"))
         {
             spawnPoint = collision.gameObject.transform;
-            Destroy(collision.gameObject);
+            //Destroy(collision.gameObject);
         }
     }
 

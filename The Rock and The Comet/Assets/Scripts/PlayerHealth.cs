@@ -48,8 +48,15 @@ public class PlayerHealth : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Checkpoint"))
         {
-            spawnPoint = collision.gameObject.transform;
-            //Destroy(collision.gameObject);
+            //transform of the collider object for code brevity in the next lines
+            Transform coll = collision.gameObject.transform;
+            //sets spawnpoint to the location of the checkpoint just reached
+            spawnPoint.position = new Vector3(coll.position.x, coll.position.y, coll.position.z);
+            //destroys object with the collider so player can move through the checkpoint
+            Destroy(collision.gameObject);
+            Debug.Log("X: " + spawnPoint.position.x + "Y: " + spawnPoint.position.y);
+            Debug.Log("touched checkpoint");
+    
         }
     }
 
@@ -62,8 +69,10 @@ public class PlayerHealth : MonoBehaviour
         if (currentHp <= 0)
         {
             //respawns player and puts back in the original spawn point
-            currentHp = 3;
             playerPos.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y, spawnPoint.position.z);
+            Debug.Log("X: " + spawnPoint.position.x + "Y: " + spawnPoint.position.y);
+            currentHp = 3;
+            
             //Destroy(gameObject);
         }
     }
@@ -80,10 +89,13 @@ public class PlayerHealth : MonoBehaviour
         } else if(hp == 1)
         {
             healthBar.sprite = healthSprites[2];
-        } else if(hp <= 0)
+        } 
+        else if(hp <= 0)
         {
             //player died
             Debug.Log("player died");
         }
+        
     }
+
 }

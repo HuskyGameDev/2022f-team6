@@ -6,9 +6,11 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
-    //for respawn functionality 
+    //for respawn and related menu functionality 
     private Transform spawnPoint;
     private Transform playerPos;
+    [SerializeField] GameObject deathCanvas;
+    [SerializeField] GameObject playerUI;
 
     //set in editor
     [SerializeField] int maxHp = 3;
@@ -42,7 +44,6 @@ public class PlayerHealth : MonoBehaviour
         else if (collision.gameObject.CompareTag("Heal") && currentHp < maxHp)
         {
             currentHp++;
-
             //destroys the healing object (I'm going under 1x use assumption)
             Destroy(collision.gameObject);
         }
@@ -68,10 +69,10 @@ public class PlayerHealth : MonoBehaviour
         //checks if the players hp hits zero and destroys the player object if it does
         if (currentHp <= 0)
         {
+            //pulls up the death message
+            deathScreen();
             //respawns player and puts back in the original spawn point
-            playerPos.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y, spawnPoint.position.z);
-            Debug.Log("X: " + spawnPoint.position.x + "Y: " + spawnPoint.position.y);
-            currentHp = 3;
+            
             
             //Destroy(gameObject);
         }
@@ -98,4 +99,20 @@ public class PlayerHealth : MonoBehaviour
         
     }
 
+    private void deathScreen()
+    {
+        Time.timeScale = 0;
+        deathCanvas.SetActive(true);
+        playerUI.SetActive(false);
+    }
+
+    public void Respawn()
+    {
+        Time.timeScale = 1;
+        deathCanvas.SetActive(false);
+        playerUI.SetActive(true);
+        playerPos.position = new Vector3(spawnPoint.position.x, spawnPoint.position.y, spawnPoint.position.z);
+        Debug.Log("X: " + spawnPoint.position.x + "Y: " + spawnPoint.position.y);
+        currentHp = 3;
+    }
 }

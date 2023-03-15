@@ -19864,19 +19864,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1780634637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4b6c63d41ede7d419eb7151d1d1c58a, type: 3}
+  m_Script: {fileID: 11500000, guid: be46a40357804664cae3fbe45bd9306a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   deathCanvas: {fileID: 826360720}
   playerUI: {fileID: 618830851}
   maxHp: 3
-  healthSprites:
-  - {fileID: 21300000, guid: d5b2abcc3853e424f8c4b907fe37d910, type: 3}
-  - {fileID: 21300000, guid: e7dd96a90e0e2ff4e8ef2a36065e5fea, type: 3}
-  - {fileID: 21300000, guid: 06327af2273c8804cb05318429f638ce, type: 3}
-  - {fileID: 21300000, guid: 3614bd74b9893b4459f50d1879b2e018, type: 3}
-  - {fileID: 21300000, guid: 47cffad9f0a70bd4e9ae0633c5ebedec, type: 3}
-  - {fileID: 21300000, guid: df69a3a616adcbc40885882bd6c38a4c, type: 3}
+  animator: {fileID: 0}
   healthBar: {fileID: 339146285}
 --- !u!114 &1780634640
 MonoBehaviour:

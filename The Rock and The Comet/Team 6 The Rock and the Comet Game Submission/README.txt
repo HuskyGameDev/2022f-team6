@@ -24,11 +24,11 @@ Then simply run Rock Game.exe in the main file.
 Team Members/Credits:
 Austin Sopha - team leader, artist
 Foenix Szot - artist
-Hunter Jones - programmer
-Luke Sheets - programmer
+Hunter Jones - programmer (past developer)
+Luke Sheets - programmer (past developer)
 Thomas Sheets - programmer
 Rose Siebigteroth - programmer
-Andrew Anderson - programmer/art
+Andrew Anderson - programmer/artist
 Ransom Duncan - programmer
 Aidan Conrade - sound designer, background music
 Isabella Capanda - sound designer, sound effects

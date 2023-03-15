@@ -49,6 +49,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Sky
+    uniqueID: 2640510955
+    locked: 0
+  - name: Surface Hills
+    uniqueID: 442594821
+    locked: 0
+  - name: Cave Entrance
+    uniqueID: 2317298589
+    locked: 0
+  - name: Walls_Ground
+    uniqueID: 319541917
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

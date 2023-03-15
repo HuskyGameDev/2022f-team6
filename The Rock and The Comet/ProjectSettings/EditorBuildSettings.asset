@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Surface Level.unity
     guid: 9118286daad5f5e48b26c145fb42fd9b
+  - enabled: 1
+    path: Assets/Scenes/Level 0.1.unity
+    guid: c3eb2d149c726144d905bfae89cbf543
+  - enabled: 1
+    path: Assets/Scenes/Level2.0.unity
+    guid: 4d650613495b8c44d96164ed47290732
+  - enabled: 1
+    path: Assets/Scenes/Surface Level Playtest.unity
+    guid: 0aa1b7e9c9ab9054eb2fccbe4b802edf
   m_configObjects: {}

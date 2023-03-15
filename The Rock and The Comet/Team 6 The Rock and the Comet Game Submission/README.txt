@@ -1,5 +1,5 @@
-(Working) Title:
-The Rock and the Comet / The Rock Game
+Title:
+The Rock and the Comet
 
 Description:
 A rock-themed, 2D pixelated style game centered around solving puzzles in order to explore different areas of an interconnected map.
@@ -27,5 +27,8 @@ Foenix Szot - artist
 Hunter Jones - programmer
 Luke Sheets - programmer
 Thomas Sheets - programmer
+Rose Siebigteroth - programmer
+Andrew Anderson - programmer/art
+Ransom Duncan - programmer
 Aidan Conrade - sound designer, background music
 Isabella Capanda - sound designer, sound effects

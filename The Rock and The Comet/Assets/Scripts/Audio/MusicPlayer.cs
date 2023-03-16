@@ -21,7 +21,10 @@ public class MusicPlayer : MonoBehaviour
         //just to test some methods, eventually this should be handled by a ui or something
         if(Input.GetKeyDown(KeyCode.P))
         {
-            playNewTrack(0);
+            if (source.isPlaying)
+                source.Stop();
+            else
+                playNewTrack(0);
         }
     }
 

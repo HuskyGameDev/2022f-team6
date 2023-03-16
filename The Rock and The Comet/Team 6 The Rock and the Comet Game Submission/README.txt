@@ -11,11 +11,12 @@ Game Controls:
 Move Right - 'D' key or right arrow key
 Move Left - 'A' key or left arrow key
 Jump - 'Space' key
-Change into Gold Form - '1' key (press again to change into Regular form)
-Change into Pumice Form - '2' key (press again to change into Regular form)
-Change into Quartz Form - '3' key (yet to be implemented)
+Change into Gold Form (shrink) - '1' key (press again to change into Regular form)
+Change into Pumice Form (float) - '2' key (press again to change into Regular form)
+Change into Quartz Form (wall climb) - '3' key (press again to change into Regular form)
 Activate Form Ability = 'F' key (only applies to Gold form)
 Pause Menu - 'Esc' key
+P - starts/stops music
 
 Installation Instructions:
 None neccessary, excluding downloading the zip file and extracting it (extract all).

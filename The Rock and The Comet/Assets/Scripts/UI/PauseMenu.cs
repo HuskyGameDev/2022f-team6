@@ -23,8 +23,8 @@ public class PauseMenu : MonoBehaviour
             pauseCanvas.SetActive(isActive);
             playerUI.SetActive(!isActive);
 
-            //always exit options menu
-            optionsCanvas.SetActive(false);
+            //always exit other menus
+            closeSubMenus();
 
             //pauses time (note only time scale so non-time dependent things still work, i.e outside update functions)
             if (isActive)
@@ -72,5 +72,11 @@ public class PauseMenu : MonoBehaviour
         levelsCanvas.SetActive(false);
 
         turnOn.SetActive(true);
+    }
+
+    private void closeSubMenus()
+    {
+        optionsCanvas.SetActive(false);
+        levelsCanvas.SetActive(false);
     }
 }

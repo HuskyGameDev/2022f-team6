@@ -154,7 +154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 200739562}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &63285529
 BoxCollider2D:
@@ -296,11 +296,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1932961143}
   - {fileID: 1076187098}
   - {fileID: 63285528}
   - {fileID: 1215736636}
   - {fileID: 1964504997}
+  - {fileID: 1932961143}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1686,7 +1686,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 200739562}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1076187099
 BoxCollider2D:
@@ -10154,7 +10154,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 200739562}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1215736637
 BoxCollider2D:
@@ -10754,6 +10754,8 @@ GameObject:
   - component: {fileID: 1932961143}
   - component: {fileID: 1932961145}
   - component: {fileID: 1932961144}
+  - component: {fileID: 1932961146}
+  - component: {fileID: 1932961147}
   m_Layer: 0
   m_Name: Scuttling Plant
   m_TagString: Enemy
@@ -10774,7 +10776,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 200739562}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1932961144
 BoxCollider2D:
@@ -10854,6 +10856,40 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1932961146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932961142}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+--- !u!50 &1932961147
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932961142}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1964504996
 GameObject:
   m_ObjectHideFlags: 0
@@ -10885,7 +10921,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 200739562}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1964504998
 BoxCollider2D:
@@ -12417,15 +12453,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4b6c63d41ede7d419eb7151d1d1c58a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 3
-  healthSprites:
-  - {fileID: 21300000, guid: d5b2abcc3853e424f8c4b907fe37d910, type: 3}
-  - {fileID: 21300000, guid: e7dd96a90e0e2ff4e8ef2a36065e5fea, type: 3}
-  - {fileID: 21300000, guid: 06327af2273c8804cb05318429f638ce, type: 3}
-  - {fileID: 21300000, guid: 3614bd74b9893b4459f50d1879b2e018, type: 3}
-  - {fileID: 21300000, guid: 47cffad9f0a70bd4e9ae0633c5ebedec, type: 3}
-  - {fileID: 21300000, guid: df69a3a616adcbc40885882bd6c38a4c, type: 3}
-  healthBar: {fileID: 9032401750288289460}
 --- !u!114 &5835809228167413211
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,9 +8,11 @@ public class AudioManager : MonoBehaviour
 {
     [SerializeField] Sound[] sounds;
 
+    AudioSource musicSource;
+
     private void Start()
     {
-        AudioSource musicSource = this.gameObject.AddComponent<AudioSource>();
+        musicSource = this.gameObject.AddComponent<AudioSource>();
 
         //setup all the sounds
         foreach (Sound s in sounds)
@@ -28,7 +30,7 @@ public class AudioManager : MonoBehaviour
             try
             {
                 s.source.clip = s.clip;
-            } catch (NullReferenceException e)
+            } catch (NullReferenceException)
             {
                 Debug.LogWarning("No audio clip was provided for sound " + s.name);
             }
@@ -38,21 +40,35 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    //stops music
+    private void ifNameNone(String soundName)
+    {
+        if(soundName.Equals("none"))
+        {
+            musicSource.Stop();
+        }
+    }
+
     //plays a sound based of its name
     public void playSound(String audioName)
     {
+        ifNameNone(audioName);
+
         Sound sound = null;
         sound = Array.Find(sounds, sound => sound.name == audioName);
 
         if (sound != null)
         {
             //prevent overlapping music
-            if (sound.type.Equals("music"))
+            if (sound.type == Sound.SoundType.music)
             {
                 sound.source.Stop();
-                sound.source.PlayOneShot(sound.clip);
+                sound.source.volume = sound.volume;
+                sound.source.loop = sound.loop;
+                sound.source.clip = sound.clip;
             }
-            else sound.source.Play();
+            
+            sound.source.Play();
         }
         else Debug.LogWarning("Unable to play sound " + audioName + " as it was not found in the given sound files, please check for correct spelling");
     }
@@ -60,6 +76,8 @@ public class AudioManager : MonoBehaviour
     //stop a specifc sound from playing based on its name
     public void stopSound(String audioName)
     {
+        ifNameNone(audioName);
+
         Sound sound = null;
         sound = Array.Find(sounds, sound => sound.name == audioName);
 
@@ -77,5 +95,32 @@ public class AudioManager : MonoBehaviour
         {
             s.source.Stop();
         }
+    }
+
+    //returns an array of all the music sounds
+    public List<String> getMusicTracks()
+    {
+        List<String> music = new List<string>();
+        music.Add("none");
+
+        foreach(Sound s in sounds)
+        {
+            if (s.type == Sound.SoundType.music)
+                music.Add(s.name);
+        }
+
+        return music;
+    }
+
+    //updates all music volume
+    public void updateMusicVolume(float volume)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.type == Sound.SoundType.music)
+                s.volume = volume;
+        }
+
+        musicSource.volume = volume;
     }
 }

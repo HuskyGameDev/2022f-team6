@@ -1,77 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MusicPlayer : MonoBehaviour
 {
-    [SerializeField] AudioClip[] musicTracks;
+    [SerializeField] GameObject musicMenu;
+    [SerializeField] GameObject volumeSlider;
 
-    private AudioSource source;
-    private int currentTrack = 0;
+    private AudioManager audioManager;
+    private Dropdown songDropdown;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        source = GetComponent<AudioSource>();
+        audioManager = this.gameObject.GetComponent<AudioManager>();
+        songDropdown = musicMenu.GetComponentInChildren<Dropdown>();
+
+        populateDropdown();
+
+        //calls the DropdownValueChanged when the value changes
+        songDropdown.onValueChanged.AddListener(delegate {
+            DropdownValueChanged(songDropdown);
+        });
     }
 
-    // Update is called once per frame
-    void Update()
+    //repopulates the dropdown list eachtime the game is loaded (makes sure if songs were added/removed this is updated)
+    private void populateDropdown()
     {
-        //just to test some methods, eventually this should be handled by a ui or something
-        if(Input.GetKeyDown(KeyCode.P))
-        {
-            if (source.isPlaying)
-                source.Stop();
-            else
-                playNewTrack(0);
-        }
+        songDropdown.ClearOptions();
+        songDropdown.AddOptions(audioManager.getMusicTracks());
     }
 
-    //switches the music to a specific track
-    public void playNewTrack(int track)
+    //play a song based on dropdowns value
+    void DropdownValueChanged(Dropdown change)
     {
-        currentTrack = track;
-        source.Stop();
-        source.PlayOneShot(musicTracks[track]);
+        audioManager.playSound(songDropdown.options[songDropdown.value].text);
     }
 
-    //an overload that plays the next track in order given by the musicTracks array
-    public void playNewTrack()
+    public void changeMusicVolume()
     {
-        source.Stop();
-
-        if (currentTrack < musicTracks.Length)
-        {
-            source.PlayOneShot(musicTracks[currentTrack++]);
-        } else
-        {
-            source.PlayOneShot(musicTracks[0]);
-            currentTrack = 0;
-        }
-    }
-
-    //control if music continues to loop or not
-    public void setLoop(bool loopTracks)
-    {
-        source.loop = loopTracks;
-    }
-
-    //control the volume music plays at, pass a value between 0 and 100 with 100 being the loudest the audio can be
-    public void setVolume(float volume)
-    {
-        source.volume = (volume/100f);
-    }
-
-    //resets the audio values back to a default state
-    public void resetValues()
-    {
-        //start playing the first track
-        currentTrack = 0;
-        source.PlayOneShot(musicTracks[currentTrack]);
-
-        setLoop(true);
-
-        setVolume(100);
+        audioManager.updateMusicVolume(volumeSlider.GetComponent<Slider>().value);
     }
 }

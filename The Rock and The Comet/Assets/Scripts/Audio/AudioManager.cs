@@ -16,10 +16,10 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in sounds)
         {
             //create and assign audio sources to all the sounds
-            if (s.type.Equals("sfx"))
+            if (s.type == Sound.SoundType.sfx)
             {
                 s.source  = this.gameObject.AddComponent<AudioSource>();
-            } else if (s.type.Equals("music"))
+            } else if (s.type == Sound.SoundType.music)
             {
                 s.source = musicSource;
             }
@@ -28,12 +28,13 @@ public class AudioManager : MonoBehaviour
             try
             {
                 s.source.clip = s.clip;
-                s.source.volume = s.volume;
-                s.source.loop = s.loop;
             } catch (NullReferenceException e)
             {
                 Debug.LogWarning("No audio clip was provided for sound " + s.name);
             }
+
+            s.source.volume = s.volume;
+            s.source.loop = s.loop;
         }
     }
 

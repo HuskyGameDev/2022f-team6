@@ -29977,6 +29977,11 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1240123797 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7697853782366341192, guid: 5677d2d0be434ce43b4b82db438a4788, type: 3}
+  m_PrefabInstance: {fileID: 6552206259105615986}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1270755237
 GameObject:
   m_ObjectHideFlags: 0
@@ -58833,6 +58838,7 @@ GameObject:
   - component: {fileID: 2048118814}
   - component: {fileID: 2048118815}
   - component: {fileID: 2048118816}
+  - component: {fileID: 2048118817}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -58872,19 +58878,43 @@ MonoBehaviour:
     type: 1
     clip: {fileID: 8300000, guid: 062338a89d79692449dbd7bb2662ae5a, type: 3}
     volume: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
-  - name: b
+  - name: Gold Landing
     type: 0
-    clip: {fileID: 8300000, guid: 32e1ea0859ea22647a3943d826119ed3, type: 3}
+    clip: {fileID: 8300000, guid: 287325eef74c4c24c80e57e51ecd7590, type: 3}
     volume: 1
     loop: 0
     source: {fileID: 0}
-  - name: c
+  - name: Gold Rolling
     type: 0
-    clip: {fileID: 8300000, guid: 53f5dfae9d14d8f4590314cd87a7cd2a, type: 3}
+    clip: {fileID: 8300000, guid: 263a2f954e8b8e04281d3b2f530415b6, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Stone Rolling
+    type: 0
+    clip: {fileID: 8300000, guid: 86cd28ada72d0514198d9924b2351d0c, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Stone Landing
+    type: 0
+    clip: {fileID: 8300000, guid: 3ff8397572019484cb03bbf2c03af523, type: 3}
     volume: 1
     loop: 0
+    source: {fileID: 0}
+  - name: Quartz  Landing
+    type: 0
+    clip: {fileID: 8300000, guid: 555ab7eb5c0beb74c8acf4b67c4fec33, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Quartz Rolling
+    type: 0
+    clip: {fileID: 8300000, guid: 76c31438ab0f3d04e8f08231759efda0, type: 3}
+    volume: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!114 &2048118816
 MonoBehaviour:
@@ -58900,6 +58930,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicMenu: {fileID: 627432281}
   volumeSlider: {fileID: 2068181210}
+--- !u!114 &2048118817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048118811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a489d33032e564e8af630a92ef223b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1240123797}
 --- !u!1 &2049999381
 GameObject:
   m_ObjectHideFlags: 0
@@ -62791,7 +62834,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1944223013598623760, guid: 5677d2d0be434ce43b4b82db438a4788, type: 3}
   m_PrefabInstance: {fileID: 6552206259105615986}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1240123797}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be46a40357804664cae3fbe45bd9306a, type: 3}

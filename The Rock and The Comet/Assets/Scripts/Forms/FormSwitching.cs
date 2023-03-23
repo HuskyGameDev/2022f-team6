@@ -8,6 +8,7 @@ public class FormSwitching : MonoBehaviour
     public bool inGold = false;
     public bool inPum = false;
     public bool inQuartz = false;
+    public bool inNone = true;
     /**KEY
      1 = Gold form
     2 = Pummice form
@@ -37,6 +38,7 @@ public class FormSwitching : MonoBehaviour
             inGold = true;
             inPum = false;
             inQuartz = false;
+            inNone = false;
 
             //changes sprite
             sr.sprite = gold;
@@ -48,6 +50,7 @@ public class FormSwitching : MonoBehaviour
 
             //changes sprite
             sr.sprite = basic;
+            inNone = true;
         }
 
         //handles switching to and from pumice form
@@ -57,6 +60,7 @@ public class FormSwitching : MonoBehaviour
             inPum = true;
             inGold = false;
             inQuartz = false;
+            inNone = false;
 
             //changes sprite
             sr.sprite = pumice;
@@ -68,6 +72,7 @@ public class FormSwitching : MonoBehaviour
 
             //changes sprite
             sr.sprite = basic;
+            inNone = true;
         }
 
         //handles switching to and from quartz form
@@ -77,6 +82,7 @@ public class FormSwitching : MonoBehaviour
             inQuartz = true;
             inPum = false;
             inGold = false;
+            inNone = false;
 
             //changes sprite
             sr.sprite = quartz;
@@ -88,6 +94,7 @@ public class FormSwitching : MonoBehaviour
 
             //changes sprite
             sr.sprite = basic;
+            inNone = true;
         }
 
     }

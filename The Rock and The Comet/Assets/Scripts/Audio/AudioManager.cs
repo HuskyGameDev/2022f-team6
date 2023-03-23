@@ -66,9 +66,12 @@ public class AudioManager : MonoBehaviour
                 sound.source.volume = sound.volume;
                 sound.source.loop = sound.loop;
                 sound.source.clip = sound.clip;
+                sound.source.Play();
+            } else
+            {
+                if(!sound.source.isPlaying)
+                    sound.source.Play();
             }
-            
-            sound.source.Play();
         }
         else Debug.LogWarning("Unable to play sound " + audioName + " as it was not found in the given sound files, please check for correct spelling");
     }

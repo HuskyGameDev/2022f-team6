@@ -15,6 +15,7 @@ TagManager:
   - BoxSpot
   - Quartz
   - Checkpoint
+  - PowerUp
   layers:
   - Default
   - TransparentFX

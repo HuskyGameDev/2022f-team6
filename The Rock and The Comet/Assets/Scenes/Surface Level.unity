@@ -24866,6 +24866,7 @@ GameObject:
   - component: {fileID: 962891763}
   - component: {fileID: 962891765}
   - component: {fileID: 962891764}
+  - component: {fileID: 962891766}
   m_Layer: 0
   m_Name: Scuttling Plant
   m_TagString: Enemy
@@ -24881,7 +24882,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962891762}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.39, y: -7.28, z: -1}
+  m_LocalPosition: {x: 10.19, y: -7.28, z: -1}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24966,6 +24967,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &962891766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962891762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  rightBound: 7.5
+  leftBound: 0
 --- !u!1 &966878502
 GameObject:
   m_ObjectHideFlags: 0
@@ -60510,6 +60526,8 @@ GameObject:
   - component: {fileID: 2089979921}
   - component: {fileID: 2089979923}
   - component: {fileID: 2089979922}
+  - component: {fileID: 2089979924}
+  - component: {fileID: 2089979925}
   m_Layer: 0
   m_Name: Scuttling Plant 3
   m_TagString: Enemy
@@ -60525,7 +60543,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089979920}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.44, y: -1.46, z: -1}
+  m_LocalPosition: {x: 11.86, y: -1.46, z: -1}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60610,6 +60628,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2089979924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089979920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  rightBound: 13.5
+  leftBound: 8.5
+--- !u!50 &2089979925
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089979920}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!213 &2096089322
 Sprite:
   m_ObjectHideFlags: 0

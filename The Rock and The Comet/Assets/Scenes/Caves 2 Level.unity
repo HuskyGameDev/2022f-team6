@@ -27845,6 +27845,7 @@ GameObject:
   - component: {fileID: 1413556708}
   - component: {fileID: 1413556710}
   - component: {fileID: 1413556709}
+  - component: {fileID: 1413556711}
   m_Layer: 0
   m_Name: Fancy Worm
   m_TagString: Enemy
@@ -27945,6 +27946,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1413556711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413556707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  rightBound: -19
+  leftBound: -29
 --- !u!1 &1432398738
 GameObject:
   m_ObjectHideFlags: 0
@@ -28909,6 +28925,7 @@ GameObject:
   - component: {fileID: 1526054260}
   - component: {fileID: 1526054262}
   - component: {fileID: 1526054261}
+  - component: {fileID: 1526054263}
   m_Layer: 0
   m_Name: Fancy Worm
   m_TagString: Enemy
@@ -29009,6 +29026,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1526054263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526054259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  rightBound: -20
+  leftBound: -27
 --- !u!1 &1553352862
 GameObject:
   m_ObjectHideFlags: 0

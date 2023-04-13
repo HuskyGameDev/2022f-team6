@@ -5,29 +5,30 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
 
-    [SerializeField] float speed = 1;
-    private float direction;
-    private Rigidbody2D enemybody;
-    private Vector3 flip;
+    [SerializeField] float speed = 1f;
+    [SerializeField] float rightBound; //change the bounds in the inspector or else schenanigans ensue
+    [SerializeField] float leftBound;
+
 
     // Start is called before the first frame update
     private void Start()
     {
-       flip = transform.localScale;
-       enemybody = GetComponent<Rigidbody2D>();
-       direction = 1;
+       flipEnemy();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.tag=="ground"){ //enemy changes direction when it hits a wall
-            direction *= -1; //reverse direction
-            flip *= -1; //changing the scale by a negative number flips the sprite
-        }
-    }
 
     // Update is called once per frame
     void Update()
     {
-        enemybody.velocity = new Vector2(direction * speed, enemybody.velocity.y);
+        transform.position = new Vector2(Mathf.PingPong(Time.time * speed, rightBound - leftBound)+rightBound, transform.position.y);
     }
+
+    IEnumerator flipEnemy(){
+        //yield return new WaitForSeconds(Time.time * speed / 2);
+        yield return new WaitForSeconds(3);
+        transform.Rotate(new Vector3(0,180,0)); //flips that bad boy 'round
+        Debug.Log("flipped");
+        flipEnemy();
+    }
+    
 }

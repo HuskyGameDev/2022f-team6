@@ -10,6 +10,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject levelsCanvas;
     [SerializeField] GameObject playerUI;
     [SerializeField] GameObject musicMenu;
+    [SerializeField] GameObject controlsMenu;
 
     private bool isActive = false;
 
@@ -64,10 +65,20 @@ public class PauseMenu : MonoBehaviour
         loadCanvas(musicMenu);
     }
 
+    public void Controls()
+    {
+        loadCanvas(controlsMenu);
+    }
+
     //exits the game (currently no save features)
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Back()
+    {
+        loadCanvas(pauseCanvas);
     }
 
     //opens a canvas and closes all others
@@ -77,6 +88,7 @@ public class PauseMenu : MonoBehaviour
         optionsCanvas.SetActive(false);
         levelsCanvas.SetActive(false);
         musicMenu.SetActive(false);
+        controlsMenu.SetActive(false);
 
         turnOn.SetActive(true);
     }
@@ -86,5 +98,6 @@ public class PauseMenu : MonoBehaviour
         optionsCanvas.SetActive(false);
         levelsCanvas.SetActive(false);
         musicMenu.SetActive(false);
+        controlsMenu.SetActive(false);
     }
 }

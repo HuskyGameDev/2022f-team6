@@ -7,23 +7,19 @@ public class Map : MonoBehaviour
 {
     [SerializeField] GameObject mapMenu;
     [SerializeField] GameObject playerUI;
-    public GameObject room2;
-    public GameObject room3;
-    public GameObject room4;
-    public GameObject room5;
-    public GameObject room6;
-    public GameObject room7;
+    public GameObject[] rooms;
 
     private bool isActive = false;
     // Start is called before the first frame update
     void Start()
     {
-        room2.SetActive(false);
-        room3.SetActive(false);
-        room4.SetActive(false);
-        room5.SetActive(false);
-        room6.SetActive(false);
-        room7.SetActive(false);
+        for(int i = 1; i<rooms.Length; i++)
+        {
+            if (rooms[i] != null)
+            {
+                rooms[i].SetActive(false);
+            }
+        }
     }
 
     // Update is called once per frame
@@ -53,23 +49,26 @@ public class Map : MonoBehaviour
             Debug.Log("touched collider");
             switch (roomNumber)
             {
+                case "Room1":
+                    if (rooms[1]!=null) { rooms[1].SetActive(true); }
+                    break;
                 case "Room2":
-                    room2.SetActive(true);
+                    if (rooms[2] != null) { rooms[2].SetActive(true); }
                     break;
                 case "Room3":
-                    room3.SetActive(true);
+                    if (rooms[3] != null) { rooms[3].SetActive(true); }
                     break;
                 case "Room4":
-                    room4.SetActive(true);
+                    if (rooms[4] != null) { rooms[4].SetActive(true); }
                     break;
                 case "Room5":
-                    room5.SetActive(true);
+                    if (rooms[5] != null) { rooms[5].SetActive(true); }
                     break;
                 case "Room6":
-                    room6.SetActive(true);
+                    if (rooms[6] != null) { rooms[6].SetActive(true); }
                     break;
                 case "Room7":
-                    room7.SetActive(true);
+                    if (rooms[7] != null) { rooms[7].SetActive(true); }
                     break;
             }
     }

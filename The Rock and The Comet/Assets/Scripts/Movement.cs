@@ -23,6 +23,8 @@ public class Movement : MonoBehaviour
     private float maxVertSpeed = 1f;
     private float maxSpeed = 1f;
 
+    private PlayerSFX sfx = null;
+
     //using a setter for this to keep it more contained/traceable
     #region setters and getters
     public void setGrounded(bool val)
@@ -61,6 +63,9 @@ public class Movement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         maxSpeed = defaultMaxSpeed;
+
+        //gets the audio manager script from the game object in the scene
+        sfx = GameObject.Find("Audio Manager").GetComponent<PlayerSFX>();
     }
 
     private void FixedUpdate()
@@ -100,6 +105,8 @@ public class Movement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("ground"))
             setGrounded(true);
+       
+        sfx.fallHit();
     }
 
     //updates when player is no longer touching an object (has redundancy in jump function incase player is touching an object not tagged with ground)
@@ -112,7 +119,7 @@ public class Movement : MonoBehaviour
 
     public bool movingHorizontal()
     {
-        if (Mathf.Abs(rb.velocity.x) > 0)
+        if (Mathf.Abs(rb.velocity.x) > 0.0000)
             return true;
         else
             return false;

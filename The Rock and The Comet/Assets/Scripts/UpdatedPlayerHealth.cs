@@ -11,6 +11,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
     private Transform playerPos;
     [SerializeField] GameObject deathCanvas;
     [SerializeField] GameObject playerUI;
+    public Map map;
 
     //set in editor
     [SerializeField] int maxHp = 3;
@@ -62,6 +63,10 @@ public class UpdatedPlayerHealth : MonoBehaviour
         else if (collision.gameObject.CompareTag("Checkpoint"))
         {
             spawnPoint = collision.gameObject.transform;
+        }
+        else if (collision.gameObject.CompareTag("Room"))
+        {
+            map.newRoom(collision);
         }
     }
 

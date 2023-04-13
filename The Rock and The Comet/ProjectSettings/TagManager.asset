@@ -16,6 +16,7 @@ TagManager:
   - Quartz
   - Checkpoint
   - PowerUp
+  - Room
   layers:
   - Default
   - TransparentFX

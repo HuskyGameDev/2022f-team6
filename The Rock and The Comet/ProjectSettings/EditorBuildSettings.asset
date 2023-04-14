@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: 
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Title Screen.unity
     guid: 2d197916b5e24954daf732117d7e924f
@@ -15,12 +15,21 @@ EditorBuildSettings:
     path: Assets/Scenes/Surface Level.unity
     guid: 9118286daad5f5e48b26c145fb42fd9b
   - enabled: 1
+    path: Assets/Scenes/Caves 2 Level.unity
+    guid: 53bee01b9badab4428d536a8c2414602
+  - enabled: 1
+    path: Assets/Scenes/Caves 1 Level.unity
+    guid: e8d9b859bde58004a8bd51b73ec353f6
+  - enabled: 1
+    path: Assets/Scenes/Crystal Cave Level.unity
+    guid: 7b19534c13e6eb74980fa9b22fdb79ed
+  - enabled: 0
     path: Assets/Scenes/Level 0.1.unity
     guid: c3eb2d149c726144d905bfae89cbf543
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level2.0.unity
     guid: 4d650613495b8c44d96164ed47290732
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Old Playtest Level.unity
     guid: 0aa1b7e9c9ab9054eb2fccbe4b802edf
   m_configObjects: {}

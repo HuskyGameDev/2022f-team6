@@ -368,7 +368,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1581017120}
         m_TargetAssemblyTypeName: LevelSwitcher, Assembly-CSharp
-        m_MethodName: lvl1
+        m_MethodName: surfaceLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -678,8 +678,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f986b8f06153fcd40b0386d14e0893e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNames:
-  - Surface Level
 --- !u!225 &1581017121
 CanvasGroup:
   m_ObjectHideFlags: 0

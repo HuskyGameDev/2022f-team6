@@ -12,6 +12,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
     [SerializeField] GameObject deathCanvas;
     [SerializeField] GameObject playerUI;
     public Map map;
+    public LevelSwitcher switcher;
 
     //set in editor
     [SerializeField] int maxHp = 3;
@@ -67,6 +68,18 @@ public class UpdatedPlayerHealth : MonoBehaviour
         else if (collision.gameObject.CompareTag("Room"))
         {
             map.newRoom(collision);
+        }
+        else if (collision.gameObject.name == "Caves2 Collider")
+        {
+            switcher.caves2();
+        }
+        else if (collision.gameObject.name == "Caves1 Collider")
+        {
+            switcher.caves1();
+        }
+        else if (collision.gameObject.name == "CrystalCaves Collider" || collision.gameObject.name == "CrystalCaves Collider (1)")
+        {
+            switcher.crystalCaves();
         }
     }
 

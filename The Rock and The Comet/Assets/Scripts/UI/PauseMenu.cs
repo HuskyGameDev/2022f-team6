@@ -10,9 +10,11 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject levelsCanvas;
     [SerializeField] GameObject playerUI;
     [SerializeField] GameObject musicMenu;
+    [SerializeField] GameObject mapMenu;
     [SerializeField] GameObject controlsMenu;
 
     private bool isActive = false;
+    private bool mapActive = false;
 
     private void Update()
     {
@@ -27,6 +29,21 @@ public class PauseMenu : MonoBehaviour
 
             //always exit other menus
             closeSubMenus();
+
+            //pauses time (note only time scale so non-time dependent things still work, i.e outside update functions)
+            if (isActive)
+            {
+                Time.timeScale = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+            }
+        }
+        else if (Input.GetKeyDown(KeyCode.M))
+        {
+            mapActive = !mapActive;
+            mapMenu.SetActive(mapActive);
 
             //pauses time (note only time scale so non-time dependent things still work, i.e outside update functions)
             if (isActive)
@@ -99,5 +116,6 @@ public class PauseMenu : MonoBehaviour
         levelsCanvas.SetActive(false);
         musicMenu.SetActive(false);
         controlsMenu.SetActive(false);
+        mapMenu.SetActive(false);
     }
 }

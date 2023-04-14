@@ -4,19 +4,28 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelSwitcher : MonoBehaviour
-{
-    //make sure to give this enough scenes for as many buttons as will ever be pressed
-    [SerializeField] string[] sceneNames;
+{ 
 
-    public void lvl1()
+    public void surfaceLevel()
     {
-        SceneManager.LoadScene(sceneNames[0]);
+        SceneManager.LoadScene("Surface Level");
         Time.timeScale = 1;
     }
 
-    public void lvl2()
+    public void caves1()
     {
-        SceneManager.LoadScene(sceneNames[1]);
+        SceneManager.LoadScene("Caves 1 Level");
         Time.timeScale = 1;
+    }
+
+    public void caves2()
+    {
+        SceneManager.LoadScene("Caves 2 Level");
+        Time.timeScale = 1;
+    }
+
+    public void crystalCaves()
+    {
+        SceneManager.LoadScene("Crystal Caves Level");
     }
 }

@@ -9,7 +9,6 @@ public class Map : MonoBehaviour
     [SerializeField] GameObject playerUI;
     public GameObject[] rooms;
 
-    private bool isActive = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,22 +24,7 @@ public class Map : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            isActive = !isActive;
 
-            playerUI.SetActive(!isActive);
-            mapMenu.SetActive(isActive);
-
-            if (isActive)
-            {
-                Time.timeScale = 0;
-            }
-            else
-            {
-                Time.timeScale = 1;
-            }
-        }
     }
 
     public void newRoom(Collider2D collision)
@@ -70,6 +54,9 @@ public class Map : MonoBehaviour
                 case "Room7":
                     if (rooms[7] != null) { rooms[7].SetActive(true); }
                     break;
-            }
+                case "Room8s":
+                    if (rooms[8] != null) { rooms[8].SetActive(true); }
+                    break;
+        }
     }
 }

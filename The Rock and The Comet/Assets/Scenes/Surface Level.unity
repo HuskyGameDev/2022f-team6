@@ -60216,12 +60216,91 @@ MonoBehaviour:
     volume: 1
     loop: 1
     source: {fileID: 0}
+  - name: Player Damage
+    type: 0
+    clip: {fileID: 8300000, guid: 9fc3e6f17c4fc5340ae3bcc37f43a4ae, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Death
+    type: 0
+    clip: {fileID: 8300000, guid: 4850bffb221b8f84985abb83aa60f06b, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Player Transformation
+    type: 0
+    clip: {fileID: 8300000, guid: 4eb871afe077b7e469e46c767f0b84b8, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gold Squeeze
+    type: 0
+    clip: {fileID: 8300000, guid: 05fa352e12f968a4180f048b6ccb58dc, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
   music:
   - name: Main Theme
     type: 1
     clip: {fileID: 8300000, guid: 062338a89d79692449dbd7bb2662ae5a, type: 3}
     volume: 1
     loop: 1
+    source: {fileID: 0}
+  misc:
+  - name: Enemy Damage
+    type: 0
+    clip: {fileID: 8300000, guid: dbf62e1f469661e4aa43e8a2f862526a, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Enemy Death
+    type: 0
+    clip: {fileID: 8300000, guid: 53f5dfae9d14d8f4590314cd87a7cd2a, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Map Paper
+    type: 0
+    clip: {fileID: 8300000, guid: 49e341649ff6776489890330f8fa6648, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI-1
+    type: 0
+    clip: {fileID: 8300000, guid: 201a11d085d765e4a9151267619c146d, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI-2
+    type: 0
+    clip: {fileID: 8300000, guid: ddc78b0c486cb8344b31060e2b62ae45, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI-3
+    type: 0
+    clip: {fileID: 8300000, guid: 5d8758d4e81e61948853973a87e30fbf, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI-4
+    type: 0
+    clip: {fileID: 8300000, guid: 4faf9362833797444b58bb740e96321d, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI-5
+    type: 0
+    clip: {fileID: 8300000, guid: 88bee3440118e90409813a75f050bc33, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: UI-6
+    type: 0
+    clip: {fileID: 8300000, guid: 69215bee950430d4e81dba23e33c8251, type: 3}
+    volume: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!114 &2048118816
 MonoBehaviour:

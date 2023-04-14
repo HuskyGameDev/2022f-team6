@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] Sound[] ambientSounds;
     [SerializeField] Sound[] playerSounds;
     [SerializeField] Sound[] music;
+    [SerializeField] Sound[] misc;
 
     AudioSource musicSource;
 
@@ -48,7 +49,7 @@ public class AudioManager : MonoBehaviour
     //this probably isn't effecient but its easy, might optimize it later
     private void combineArrays()
     {
-        sounds = new Sound[ambientSounds.Length + playerSounds.Length + music.Length];
+        sounds = new Sound[ambientSounds.Length + playerSounds.Length + music.Length + misc.Length];
 
         int i = 0;
 
@@ -70,6 +71,13 @@ public class AudioManager : MonoBehaviour
         {
             sounds[i+j+k] = music[k++];
         }
+
+        int l = 0;
+        foreach (Sound s in misc)
+        {
+            sounds[i + j + k + l] = misc[l++];
+        }
+
     }
 
     //stops music

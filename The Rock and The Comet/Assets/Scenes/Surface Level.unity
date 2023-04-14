@@ -60247,6 +60247,24 @@ MonoBehaviour:
     volume: 1
     loop: 1
     source: {fileID: 0}
+  - name: Cavern Theme
+    type: 1
+    clip: {fileID: 8300000, guid: c4cbe6711ca457647bf824fb716c8fc7, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Crystal Theme
+    type: 1
+    clip: {fileID: 8300000, guid: 4848548a4e967d84a9f840c422ee3a11, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Volcano Theme
+    type: 1
+    clip: {fileID: 8300000, guid: 5d3f27fcfc128444da9362817925865b, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
   misc:
   - name: Enemy Damage
     type: 0

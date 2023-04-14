@@ -6,13 +6,18 @@ using System;
 
 public class AudioManager : MonoBehaviour
 {
-    [SerializeField] Sound[] sounds;
+    private Sound[] sounds;
+    [SerializeField] Sound[] ambientSounds;
+    [SerializeField] Sound[] playerSounds;
+    [SerializeField] Sound[] music;
 
     AudioSource musicSource;
 
     private void Start()
     {
         musicSource = this.gameObject.AddComponent<AudioSource>();
+
+        combineArrays();
 
         //setup all the sounds
         foreach (Sound s in sounds)
@@ -37,6 +42,33 @@ public class AudioManager : MonoBehaviour
 
             s.source.volume = s.volume;
             s.source.loop = s.loop;
+        }
+    }
+
+    //this probably isn't effecient but its easy, might optimize it later
+    private void combineArrays()
+    {
+        sounds = new Sound[ambientSounds.Length + playerSounds.Length + music.Length];
+
+        int i = 0;
+
+        foreach(Sound s in ambientSounds)
+        {
+            sounds[i] = ambientSounds[i++];
+        }
+
+        int j = 0;
+
+        foreach (Sound s in playerSounds)
+        {
+            sounds[i+j] = playerSounds[j++];
+        }
+
+        int k = 0;
+
+        foreach (Sound s in music)
+        {
+            sounds[i+j+k] = music[k++];
         }
     }
 

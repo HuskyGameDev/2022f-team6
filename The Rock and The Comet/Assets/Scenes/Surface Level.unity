@@ -60148,10 +60148,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f149a5930cf3a7c47aedf2a0158a1350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: Main Surface Music
-    type: 1
-    clip: {fileID: 8300000, guid: 062338a89d79692449dbd7bb2662ae5a, type: 3}
+  ambientSounds:
+  - name: Lava Hit
+    type: 0
+    clip: {fileID: 8300000, guid: 84b79feccd37dca4b9d76cd537859261, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Cave Ambience
+    type: 0
+    clip: {fileID: 8300000, guid: 32e1ea0859ea22647a3943d826119ed3, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lava Ambience
+    type: 0
+    clip: {fileID: 8300000, guid: ca326cddd18f9c0448e8b89542bc9a35, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Water Drip
+    type: 0
+    clip: {fileID: 8300000, guid: f1c0cc3df36dab74eb71d924f6eb0ced, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  playerSounds:
+  - name: Quartz Landing
+    type: 0
+    clip: {fileID: 8300000, guid: 555ab7eb5c0beb74c8acf4b67c4fec33, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Quartz Rolling
+    type: 0
+    clip: {fileID: 8300000, guid: 76c31438ab0f3d04e8f08231759efda0, type: 3}
     volume: 1
     loop: 1
     source: {fileID: 0}
@@ -60179,47 +60210,18 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
-  - name: Quartz  Landing
-    type: 0
-    clip: {fileID: 8300000, guid: 555ab7eb5c0beb74c8acf4b67c4fec33, type: 3}
-    volume: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Quartz Rolling
-    type: 0
-    clip: {fileID: 8300000, guid: 76c31438ab0f3d04e8f08231759efda0, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Cave Ambience
-    type: 0
-    clip: {fileID: 8300000, guid: 32e1ea0859ea22647a3943d826119ed3, type: 3}
-    volume: 1
-    loop: 0
-    source: {fileID: 0}
   - name: Falling
     type: 0
     clip: {fileID: 8300000, guid: 1052006c7ac304045a25afef8022d98e, type: 3}
     volume: 1
     loop: 1
     source: {fileID: 0}
-  - name: Lava Ambience
-    type: 0
-    clip: {fileID: 8300000, guid: ca326cddd18f9c0448e8b89542bc9a35, type: 3}
+  music:
+  - name: Main Theme
+    type: 1
+    clip: {fileID: 8300000, guid: 062338a89d79692449dbd7bb2662ae5a, type: 3}
     volume: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Lava Hit
-    type: 0
-    clip: {fileID: 8300000, guid: 84b79feccd37dca4b9d76cd537859261, type: 3}
-    volume: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Water Drip
-    type: 0
-    clip: {fileID: 8300000, guid: f1c0cc3df36dab74eb71d924f6eb0ced, type: 3}
-    volume: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
 --- !u!114 &2048118816
 MonoBehaviour:

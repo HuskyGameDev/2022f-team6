@@ -126,4 +126,12 @@ public class AudioManager : MonoBehaviour
 
         musicSource.volume = volume;
     }
+
+    //returns the duration of the song
+    public float getDuration(String soundName)
+    {
+        Sound sound = Array.Find(sounds, sound => sound.name == soundName);
+
+        return sound.clip.length;
+    }
 }

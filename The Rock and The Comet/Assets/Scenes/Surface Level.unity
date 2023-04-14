@@ -60113,6 +60113,7 @@ GameObject:
   - component: {fileID: 2048118815}
   - component: {fileID: 2048118816}
   - component: {fileID: 2048118817}
+  - component: {fileID: 2048118818}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -60190,6 +60191,36 @@ MonoBehaviour:
     volume: 1
     loop: 1
     source: {fileID: 0}
+  - name: Cave Ambience
+    type: 0
+    clip: {fileID: 8300000, guid: 32e1ea0859ea22647a3943d826119ed3, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Falling
+    type: 0
+    clip: {fileID: 8300000, guid: 1052006c7ac304045a25afef8022d98e, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Lava Ambience
+    type: 0
+    clip: {fileID: 8300000, guid: ca326cddd18f9c0448e8b89542bc9a35, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lava Hit
+    type: 0
+    clip: {fileID: 8300000, guid: 84b79feccd37dca4b9d76cd537859261, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Water Drip
+    type: 0
+    clip: {fileID: 8300000, guid: f1c0cc3df36dab74eb71d924f6eb0ced, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &2048118816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60217,7 +60248,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1240123797}
-  fallSpeedToSound: 0
+--- !u!114 &2048118818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048118811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f2f365943213044961e9be9a931682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundTickSpeed: 5
 --- !u!1 &2049999381
 GameObject:
   m_ObjectHideFlags: 0

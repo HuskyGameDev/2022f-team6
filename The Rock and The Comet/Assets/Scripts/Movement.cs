@@ -112,14 +112,14 @@ public class Movement : MonoBehaviour
     //updates when player is no longer touching an object (has redundancy in jump function incase player is touching an object not tagged with ground)
     private void OnCollisionExit2D(Collision2D collision)
     {
-        isGrounded = false;
+            //isGrounded = false; this was causing some issues but I'll leave it incase we still need it later (issue was if you ran into something on the ground it would stop you from jumping again)
     }
 
     #region use these methods to get information for other scripts
 
     public bool movingHorizontal()
     {
-        if (Mathf.Abs(rb.velocity.x) > 0.0000)
+        if (Mathf.Abs(rb.velocity.x) > 0 && Input.GetAxis("Horizontal") != 0)
             return true;
         else
             return false;

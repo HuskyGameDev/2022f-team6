@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerSFX : MonoBehaviour
 {
     [SerializeField] GameObject player;
-    [SerializeField] float fallSpeedToSound = .5f;
 
     private AudioManager audioManager;
     private FormSwitching formSwitching;
@@ -27,6 +26,10 @@ public class PlayerSFX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!movement.movingHorizontal())
+            stopRolls();
+
+
         goldRoll();
         stoneRoll();
         quartzRoll();
@@ -52,6 +55,18 @@ public class PlayerSFX : MonoBehaviour
         {
             //audioManager.playSound("Pumice Landing"); uncomment this when there is a pumice land sound added
         }
+    }
+
+    //while player is falling
+    private void falling()
+    {
+        audioManager.playSound("Falling");
+    }
+
+    //if player touches lava
+    public void lavaHit()
+    {
+        audioManager.playSound("Lava Hit");
     }
 
     private void stopRolls()

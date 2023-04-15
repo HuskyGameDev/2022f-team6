@@ -26,6 +26,6 @@ public class LevelSwitcher : MonoBehaviour
 
     public void crystalCaves()
     {
-        SceneManager.LoadScene("Crystal Caves Level");
+        SceneManager.LoadScene("Crystal Cave Level");
     }
 }

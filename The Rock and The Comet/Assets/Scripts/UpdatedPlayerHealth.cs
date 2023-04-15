@@ -14,6 +14,8 @@ public class UpdatedPlayerHealth : MonoBehaviour
     public Map map;
     public LevelSwitcher switcher;
 
+    static string entrypoint;
+
     //set in editor
     [SerializeField] int maxHp = 3;
 

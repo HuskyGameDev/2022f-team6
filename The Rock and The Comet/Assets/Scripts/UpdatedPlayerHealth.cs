@@ -9,9 +9,10 @@ public class UpdatedPlayerHealth : MonoBehaviour
     //for respawn functionality 
     private Transform spawnPoint;
     private Transform playerPos;
-
     [SerializeField] GameObject deathCanvas;
     [SerializeField] GameObject playerUI;
+    [SerializeField] GameObject transition;
+    [SerializeField] GameObject transCanvas;
     public Map map;
     public LevelSwitcher switcher;
 
@@ -40,6 +41,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
         animator.SetBool("No Damage", true);
         animator.SetBool("1 Damage", false);
         animator.SetBool("2 Damage", false);
+        StartCoroutine(Fade(false, transition.GetComponent<Image>(), null));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -72,7 +74,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Switch"))
         {
-            switcher.levelSwitch(collision);
+            StartCoroutine(Fade(true, transition.GetComponent<Image>(), collision));
         }
     }
 
@@ -141,5 +143,37 @@ public class UpdatedPlayerHealth : MonoBehaviour
         animator.SetBool("No Damage", true);
         animator.SetBool("1 Damage", false);
         animator.SetBool("2 Damage", false);
+    }
+
+    IEnumerator Fade(bool fadeIn, Image img, Collider2D collision)
+    {
+        if (!fadeIn)
+        {
+            for (float i = 1; i >= 0; i -= Time.deltaTime)
+            {
+                img.color = new Color(.046f, .0456f, .0566f, i);
+                yield return null;
+            }
+            img.color = new Color(.046f, .0456f, .0566f, 0);
+            transCanvas.SetActive(false);
+            yield return null;
+        }
+        else if (fadeIn)
+        {
+            transCanvas.SetActive(true);
+            for (float i = 0; i <=1; i += Time.deltaTime)
+            {
+                img.color = new Color(.046f, .0456f, .0566f, i);
+                yield return null;
+            }
+            img.color = new Color(.046f, .0456f, .0566f, 1);
+            yield return null;
+        }
+        if(collision != null)
+        {
+            yield return new WaitForSeconds(1);
+            switcher.levelSwitch(collision);
+        }
+        
     }
 }

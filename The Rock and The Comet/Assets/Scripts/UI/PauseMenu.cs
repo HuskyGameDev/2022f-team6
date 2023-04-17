@@ -6,8 +6,6 @@ public class PauseMenu : MonoBehaviour
 { 
     //These are the canvas objects needed for opening menus, note this script should be placed on an object that ISN'T one of these
     [SerializeField] GameObject pauseCanvas;
-    [SerializeField] GameObject optionsCanvas;
-    [SerializeField] GameObject levelsCanvas;
     [SerializeField] GameObject playerUI;
     [SerializeField] GameObject musicMenu;
     [SerializeField] GameObject mapMenu;
@@ -66,17 +64,6 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    //opens up an options menu
-    public void Options()
-    {
-        loadCanvas(optionsCanvas);
-    }
-
-    public void Levels()
-    {
-        loadCanvas(levelsCanvas);
-    }
-
     public void Music()
     {
         loadCanvas(musicMenu);
@@ -102,8 +89,6 @@ public class PauseMenu : MonoBehaviour
     private void loadCanvas(GameObject turnOn)
     {
         pauseCanvas.SetActive(false);
-        optionsCanvas.SetActive(false);
-        levelsCanvas.SetActive(false);
         musicMenu.SetActive(false);
         controlsMenu.SetActive(false);
 
@@ -112,8 +97,6 @@ public class PauseMenu : MonoBehaviour
 
     private void closeSubMenus()
     {
-        optionsCanvas.SetActive(false);
-        levelsCanvas.SetActive(false);
         musicMenu.SetActive(false);
         controlsMenu.SetActive(false);
         mapMenu.SetActive(false);

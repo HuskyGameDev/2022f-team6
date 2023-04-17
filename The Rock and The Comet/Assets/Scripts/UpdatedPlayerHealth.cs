@@ -9,6 +9,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
     //for respawn functionality 
     private Transform spawnPoint;
     private Transform playerPos;
+    public static int entryPointNum = 0;
     [SerializeField] GameObject deathCanvas;
     [SerializeField] GameObject playerUI;
     [SerializeField] GameObject transition;
@@ -32,10 +33,11 @@ public class UpdatedPlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //finds the object tagged as player and accesses the transform
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
-       //finds the object tagged as respawn and accesses the transform
+        playerPos.position = findSpawnPoint(entryPointNum).position;
         spawnPoint = GameObject.FindGameObjectWithTag("Respawn").transform;
+        spawnPoint.position = findSpawnPoint(entryPointNum).position;
+        Debug.Log(playerPos);
         currentHp = maxHp;
 
         animator.SetBool("No Damage", true);
@@ -75,6 +77,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
         else if (collision.gameObject.CompareTag("Switch"))
         {
             StartCoroutine(Fade(true, transition.GetComponent<Image>(), collision));
+            setSpawnPoint(collision);
         }
     }
 
@@ -172,8 +175,83 @@ public class UpdatedPlayerHealth : MonoBehaviour
         if(collision != null)
         {
             yield return new WaitForSeconds(1);
-            switcher.levelSwitch(collision);
+            setSpawnPoint(collision);
         }
         
+    }
+
+    public void setSpawnPoint(Collider2D collision)
+    {
+        string name = collision.gameObject.name;
+        switch (name)
+        {
+            case "Entrance0":
+                entryPointNum = 1;
+                switcher.caves2();
+                break;
+            case "Entrance1":
+                entryPointNum = 4;
+                switcher.caves1();
+                break;
+            case "Entrance2":
+                entryPointNum = 3;
+                switcher.caves1();
+                break;
+            case "Entrance3":
+                entryPointNum = 5;
+                switcher.crystalCaves();
+                break;
+            case "Entrance4":
+                entryPointNum = 6;
+                switcher.crystalCaves();
+                break;
+            case "Entrance5":
+                entryPointNum = 2;
+                switcher.caves2();
+                break;
+            case "Entrance6":
+                entryPointNum = 7;
+                switcher.caves1();
+                break;
+            case "Entrance7":
+                entryPointNum = 8;
+                switcher.caves1();
+                break;
+        }
+    }
+
+    public Transform findSpawnPoint(int i)
+    {
+        switch (i)
+        {
+            case (0):
+                return GameObject.Find("Spawn0").transform;
+                break;
+            case (1):
+                return GameObject.Find("Spawn1").transform;
+                break;
+            case (2):
+                return GameObject.Find("Spawn2").transform;
+                break;
+            case (3):
+                return GameObject.Find("Spawn3").transform;
+                break;
+            case (4):
+                return GameObject.Find("Spawn4").transform;
+                break;
+            case (5):
+                return GameObject.Find("Spawn5").transform;
+                break;
+            case (6):
+                return GameObject.Find("Spawn6").transform;
+                break;
+            case (7):
+                return GameObject.Find("Spawn7").transform;
+                break;
+            case (8):
+                return GameObject.Find("Spawn8").transform;
+                break;
+        }
+        return null;
     }
 }

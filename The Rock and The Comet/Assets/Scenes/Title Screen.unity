@@ -1203,6 +1203,7 @@ MonoBehaviour:
   - {fileID: 1624645910}
   wait: 3
   introCanvas: {fileID: 859998220}
+  spawn: {fileID: 0}
   isRunning: 0
   switcher: {fileID: 1581017123}
 --- !u!114 &1581017123

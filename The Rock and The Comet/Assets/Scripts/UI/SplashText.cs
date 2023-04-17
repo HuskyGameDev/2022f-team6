@@ -10,6 +10,7 @@ public class SplashText : MonoBehaviour
     public GameObject[] splash;
     public float wait;
     [SerializeField] GameObject introCanvas;
+    [SerializeField] GameObject spawn;
     public bool isRunning;
     public LevelSwitcher switcher;
     // Start is called before the first frame update
@@ -20,6 +21,7 @@ public class SplashText : MonoBehaviour
 
     public void startRunning()
     {
+        
         introCanvas.SetActive(true);
         StartCoroutine(TextScroll(wait));
         

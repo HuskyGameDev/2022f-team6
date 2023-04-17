@@ -59158,6 +59158,7 @@ GameObject:
   - component: {fileID: 2048118816}
   - component: {fileID: 2048118817}
   - component: {fileID: 2048118818}
+  - component: {fileID: 2048118819}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -59284,101 +59285,137 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: Gold Grow
+    type: 0
+    clip: {fileID: 8300000, guid: 91ef021eacf8b5d4e8d821e66d7a9882, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Gold Shrink
+    type: 0
+    clip: {fileID: 8300000, guid: 5ef619129e7b89341a2317d75e0fd25c, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump-1
+    type: 0
+    clip: {fileID: 8300000, guid: 107c04b816163b74e8ca4c9be5c2e3ff, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump-2
+    type: 0
+    clip: {fileID: 8300000, guid: 4e5156f8f79fa0841b3a8e6a11621363, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
   enemySounds:
   - name: Scuttle-1
     type: 0
     clip: {fileID: 8300000, guid: 673f821ffc88380409b4c8026cd5d397, type: 3}
-    volume: 1
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   - name: Scuttle-2
     type: 0
     clip: {fileID: 8300000, guid: 7de15922ec920c1409a8a7dac21607d1, type: 3}
-    volume: 1
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   - name: Big Dragon-1
     type: 0
     clip: {fileID: 8300000, guid: 164a0f32dc257694f87a094ed257856d, type: 3}
-    volume: 1
+    volume: 0.5
     loop: 0
     source: {fileID: 0}
   - name: Big Dragon-2
     type: 0
     clip: {fileID: 8300000, guid: 54be391e203768e4b8a2782af838e3e7, type: 3}
-    volume: 1
+    volume: 0.5
     loop: 0
     source: {fileID: 0}
   - name: Lava Beetle-1
     type: 0
     clip: {fileID: 8300000, guid: 2468b3ea743043343a20059962503d3f, type: 3}
-    volume: 1
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   - name: Lava Beetle-2
     type: 0
     clip: {fileID: 8300000, guid: bedcc961344ed604caaf1401615519d8, type: 3}
-    volume: 1
+    volume: 0.2
+    loop: 0
+    source: {fileID: 0}
+  - name: Small Dragon-1
+    type: 0
+    clip: {fileID: 8300000, guid: f12361a1103eb284eb4684f101a86874, type: 3}
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   - name: Small Dragon-2
     type: 0
-    clip: {fileID: 8300000, guid: f12361a1103eb284eb4684f101a86874, type: 3}
-    volume: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Small Dragon-3
-    type: 0
     clip: {fileID: 8300000, guid: 8cde314f87a415c44b15e3100acc90c4, type: 3}
-    volume: 1
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   - name: Water Bloop-1
     type: 0
     clip: {fileID: 8300000, guid: a28435c2254dadd4598dff970604da95, type: 3}
-    volume: 1
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   - name: Water Bloop-2
     type: 0
     clip: {fileID: 8300000, guid: e67021719bd93384b9c41ff18a04f72e, type: 3}
-    volume: 1
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   - name: Water Bloop-3
     type: 0
     clip: {fileID: 8300000, guid: 6f6bf1a311bf1df4e990e9210f2b589d, type: 3}
-    volume: 1
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   - name: Water Bloop-4
     type: 0
     clip: {fileID: 8300000, guid: 8f58dc443d801244384e5311c467d000, type: 3}
-    volume: 1
+    volume: 0.2
     loop: 0
     source: {fileID: 0}
   music:
-  - name: Main Theme
+  - name: Volcano Ascent Music
     type: 1
-    clip: {fileID: 8300000, guid: 062338a89d79692449dbd7bb2662ae5a, type: 3}
+    clip: {fileID: 8300000, guid: 7ffcba16a2113d448a0c525a6fd1504a, type: 3}
     volume: 1
     loop: 1
     source: {fileID: 0}
-  - name: Cavern Theme
+  - name: Cavernous Music
     type: 1
     clip: {fileID: 8300000, guid: c4cbe6711ca457647bf824fb716c8fc7, type: 3}
     volume: 1
     loop: 1
     source: {fileID: 0}
-  - name: Crystal Theme
+  - name: Crystalline Music
     type: 1
     clip: {fileID: 8300000, guid: 4848548a4e967d84a9f840c422ee3a11, type: 3}
     volume: 1
     loop: 1
     source: {fileID: 0}
-  - name: Volcano Theme
+  - name: Volcanosis Music
     type: 1
-    clip: {fileID: 8300000, guid: 5d3f27fcfc128444da9362817925865b, type: 3}
+    clip: {fileID: 8300000, guid: 675bfebb691b2f34bbcc09712b6bd686, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Credits Music
+    type: 1
+    clip: {fileID: 8300000, guid: c6a73c839d28cfd4d98ebb3d0a6256de, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Museum Music
+    type: 1
+    clip: {fileID: 8300000, guid: 7f1488a635b21664aa501f31001d58a2, type: 3}
     volume: 1
     loop: 1
     source: {fileID: 0}
@@ -59437,6 +59474,18 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  - name: Puzzle-1
+    type: 0
+    clip: {fileID: 8300000, guid: d291f9d0dd1a4a44d98d2a605c855226, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Puzzle-2
+    type: 0
+    clip: {fileID: 8300000, guid: ce5116c0faa45a94882cc4d459f17ad1, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!114 &2048118816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59474,6 +59523,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 04f2f365943213044961e9be9a931682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundTickSpeed: 5
+  isEnabled: 0
+--- !u!114 &2048118819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2048118811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0482f28166fb54c896b56e9d1d5162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   soundTickSpeed: 5

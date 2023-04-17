@@ -81,7 +81,7 @@ public class AudioManager : MonoBehaviour
         }
 
         int m = 0;
-        foreach (Sound s in misc)
+        foreach (Sound s in enemySounds)
         {
             sounds[i + j + k + l + m] = enemySounds[m++];
         }
@@ -95,6 +95,25 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.Stop();
         }
+    }
+
+    //plays a sound on a specified audio source
+    public void playSoundOn(String audioName, AudioSource audioSource)
+    {
+        ifNameNone(audioName);
+
+        Sound sound = null;
+        sound = Array.Find(sounds, sound => sound.name == audioName);
+
+        if (sound != null)
+        {
+            //set the audio source to play whatever sound is associated with the audio name
+            audioSource.clip = sound.clip;
+
+            if (!sound.source.isPlaying)
+                sound.source.Play();
+        }
+        else Debug.LogWarning("Unable to play sound " + audioName + " as it was not found in the given sound files, please check for correct spelling");
     }
 
     //plays a sound based of its name

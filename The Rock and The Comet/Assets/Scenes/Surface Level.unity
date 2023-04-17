@@ -1105,7 +1105,7 @@ GameObject:
   - component: {fileID: 39406264}
   - component: {fileID: 39406265}
   m_Layer: 0
-  m_Name: RespawnPoint
+  m_Name: RespawnPointSurface
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1679,8 +1679,8 @@ GameObject:
   - component: {fileID: 115926839}
   - component: {fileID: 115926838}
   m_Layer: 0
-  m_Name: Caves1 Collider
-  m_TagString: Untagged
+  m_Name: Caves 1 From Surface
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -36729,8 +36729,8 @@ GameObject:
   - component: {fileID: 1418726958}
   - component: {fileID: 1418726957}
   m_Layer: 0
-  m_Name: Caves2 Collider
-  m_TagString: Untagged
+  m_Name: Caves 2 From Surface
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

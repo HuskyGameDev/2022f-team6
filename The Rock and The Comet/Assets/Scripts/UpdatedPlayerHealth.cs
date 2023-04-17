@@ -9,12 +9,11 @@ public class UpdatedPlayerHealth : MonoBehaviour
     //for respawn functionality 
     private Transform spawnPoint;
     private Transform playerPos;
+
     [SerializeField] GameObject deathCanvas;
     [SerializeField] GameObject playerUI;
     public Map map;
     public LevelSwitcher switcher;
-
-    static string entrypoint;
 
     //set in editor
     [SerializeField] int maxHp = 3;
@@ -71,17 +70,9 @@ public class UpdatedPlayerHealth : MonoBehaviour
         {
             map.newRoom(collision);
         }
-        else if (collision.gameObject.name == "Caves2 Collider")
+        else if (collision.gameObject.CompareTag("Switch"))
         {
-            switcher.caves2();
-        }
-        else if (collision.gameObject.name == "Caves1 Collider")
-        {
-            switcher.caves1();
-        }
-        else if (collision.gameObject.name == "CrystalCaves Collider" || collision.gameObject.name == "CrystalCaves Collider (1)")
-        {
-            switcher.crystalCaves();
+            switcher.levelSwitch(collision);
         }
     }
 

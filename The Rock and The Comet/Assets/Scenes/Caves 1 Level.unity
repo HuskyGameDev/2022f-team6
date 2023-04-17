@@ -16523,8 +16523,8 @@ GameObject:
   - component: {fileID: 627116325}
   - component: {fileID: 627116324}
   m_Layer: 0
-  m_Name: CrystalCaves Collider
-  m_TagString: Untagged
+  m_Name: Crystal Caves Entry 1
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16542,7 +16542,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 11.409133, y: -7.043474}
+  m_Offset: {x: 10.659832, y: -7.043474}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -16553,7 +16553,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.7393894, y: 3.7836494}
+  m_Size: {x: 3.2379913, y: 3.7836494}
   m_EdgeRadius: 0
 --- !u!4 &627116325
 Transform:
@@ -19226,6 +19226,64 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &707615079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 707615081}
+  - component: {fileID: 707615080}
+  m_Layer: 0
+  m_Name: Caves 2 Entry
+  m_TagString: Switch
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &707615080
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707615079}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -48.098225, y: 17.556694}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.6857681, y: 6.638649}
+  m_EdgeRadius: 0
+--- !u!4 &707615081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707615079}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.821226, y: -0.9707246, z: 0.041167486}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712225176
 GameObject:
   m_ObjectHideFlags: 0
@@ -45981,49 +46039,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f149a5930cf3a7c47aedf2a0158a1350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: Main Cave Music
-    type: 1
-    clip: {fileID: 8300000, guid: 32e1ea0859ea22647a3943d826119ed3, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Gold Landing
-    type: 0
-    clip: {fileID: 8300000, guid: 287325eef74c4c24c80e57e51ecd7590, type: 3}
-    volume: 0.25
-    loop: 0
-    source: {fileID: 0}
-  - name: Gold Rolling
-    type: 0
-    clip: {fileID: 8300000, guid: 263a2f954e8b8e04281d3b2f530415b6, type: 3}
-    volume: 0.25
-    loop: 1
-    source: {fileID: 0}
-  - name: Stone Rolling
-    type: 0
-    clip: {fileID: 8300000, guid: 86cd28ada72d0514198d9924b2351d0c, type: 3}
-    volume: 0.25
-    loop: 1
-    source: {fileID: 0}
-  - name: Stone Landing
-    type: 0
-    clip: {fileID: 8300000, guid: 3ff8397572019484cb03bbf2c03af523, type: 3}
-    volume: 0.25
-    loop: 0
-    source: {fileID: 0}
-  - name: Quartz  Landing
-    type: 0
-    clip: {fileID: 8300000, guid: 555ab7eb5c0beb74c8acf4b67c4fec33, type: 3}
-    volume: 0.25
-    loop: 0
-    source: {fileID: 0}
-  - name: Quartz Rolling
-    type: 0
-    clip: {fileID: 8300000, guid: 76c31438ab0f3d04e8f08231759efda0, type: 3}
-    volume: 0.25
-    loop: 1
-    source: {fileID: 0}
+  ambientSounds: []
+  playerSounds: []
+  music: []
+  misc: []
 --- !u!4 &1587160555
 Transform:
   m_ObjectHideFlags: 0
@@ -74201,8 +74220,8 @@ GameObject:
   - component: {fileID: 2144042015}
   - component: {fileID: 2144042014}
   m_Layer: 0
-  m_Name: CrystalCaves Collider (1)
-  m_TagString: Untagged
+  m_Name: Crystal Caves Entry 2
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74220,7 +74239,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 4.06196, y: 8.7305355}
+  m_Offset: {x: 2.359002, y: 8.7305355}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -74231,7 +74250,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.167141, y: 7.832592}
+  m_Size: {x: 6.573057, y: 7.832592}
   m_EdgeRadius: 0
 --- !u!4 &2144042015
 Transform:

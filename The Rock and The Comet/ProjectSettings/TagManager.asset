@@ -17,6 +17,7 @@ TagManager:
   - Checkpoint
   - PowerUp
   - Room
+  - Switch
   layers:
   - Default
   - TransparentFX

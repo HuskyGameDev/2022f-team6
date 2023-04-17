@@ -33,6 +33,9 @@ public class Map : MonoBehaviour
             Debug.Log("touched collider");
             switch (roomNumber)
             {
+                case "Room0":
+                    if (rooms[0]!=null) { rooms[0].SetActive(true); }
+                    break;
                 case "Room1":
                     if (rooms[1]!=null) { rooms[1].SetActive(true); }
                     break;
@@ -54,7 +57,7 @@ public class Map : MonoBehaviour
                 case "Room7":
                     if (rooms[7] != null) { rooms[7].SetActive(true); }
                     break;
-                case "Room8s":
+                case "Room8":
                     if (rooms[8] != null) { rooms[8].SetActive(true); }
                     break;
         }

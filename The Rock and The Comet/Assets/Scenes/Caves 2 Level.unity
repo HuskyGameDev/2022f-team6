@@ -12681,7 +12681,7 @@ MonoBehaviour:
   levelsCanvas: {fileID: 1347510335}
   playerUI: {fileID: 209339557}
   musicMenu: {fileID: 233318711}
-  mapMenu: {fileID: 0}
+  mapMenu: {fileID: 1232838096}
   controlsMenu: {fileID: 436940767}
 --- !u!114 &773229037
 MonoBehaviour:
@@ -21657,8 +21657,8 @@ GameObject:
   - component: {fileID: 1090984970}
   - component: {fileID: 1090984969}
   m_Layer: 0
-  m_Name: Caves1 Collider
-  m_TagString: Untagged
+  m_Name: Caves 1 Entry
+  m_TagString: Switch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30039,49 +30039,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f149a5930cf3a7c47aedf2a0158a1350, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds:
-  - name: Main Cave Music
-    type: 1
-    clip: {fileID: 8300000, guid: 32e1ea0859ea22647a3943d826119ed3, type: 3}
-    volume: 1
-    loop: 1
-    source: {fileID: 0}
-  - name: Gold Landing
-    type: 0
-    clip: {fileID: 8300000, guid: 287325eef74c4c24c80e57e51ecd7590, type: 3}
-    volume: 0.25
-    loop: 0
-    source: {fileID: 0}
-  - name: Gold Rolling
-    type: 0
-    clip: {fileID: 8300000, guid: 263a2f954e8b8e04281d3b2f530415b6, type: 3}
-    volume: 0.25
-    loop: 1
-    source: {fileID: 0}
-  - name: Stone Rolling
-    type: 0
-    clip: {fileID: 8300000, guid: 86cd28ada72d0514198d9924b2351d0c, type: 3}
-    volume: 0.25
-    loop: 1
-    source: {fileID: 0}
-  - name: Stone Landing
-    type: 0
-    clip: {fileID: 8300000, guid: 3ff8397572019484cb03bbf2c03af523, type: 3}
-    volume: 0.25
-    loop: 0
-    source: {fileID: 0}
-  - name: Quartz  Landing
-    type: 0
-    clip: {fileID: 8300000, guid: 555ab7eb5c0beb74c8acf4b67c4fec33, type: 3}
-    volume: 0.25
-    loop: 0
-    source: {fileID: 0}
-  - name: Quartz Rolling
-    type: 0
-    clip: {fileID: 8300000, guid: 76c31438ab0f3d04e8f08231759efda0, type: 3}
-    volume: 0.25
-    loop: 1
-    source: {fileID: 0}
+  ambientSounds: []
+  playerSounds: []
+  music: []
+  misc: []
 --- !u!4 &1587160555
 Transform:
   m_ObjectHideFlags: 0

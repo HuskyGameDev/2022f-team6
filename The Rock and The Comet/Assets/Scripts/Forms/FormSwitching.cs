@@ -15,9 +15,9 @@ public class FormSwitching : MonoBehaviour
     3 = Quartz form */
 
     //locks all forms by default
-    public bool goldUnlocked = false;
-    public bool pumiceUnlocked = false;
-    public bool quartzUnlocked = false;
+    public static bool goldUnlocked = false;
+    public static bool pumiceUnlocked = false;
+    public static bool quartzUnlocked = false;
 
     //get all the sprites from the editor
     [SerializeField] Sprite basic;

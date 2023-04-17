@@ -59284,6 +59284,79 @@ MonoBehaviour:
     volume: 1
     loop: 0
     source: {fileID: 0}
+  enemySounds:
+  - name: Scuttle-1
+    type: 0
+    clip: {fileID: 8300000, guid: 673f821ffc88380409b4c8026cd5d397, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Scuttle-2
+    type: 0
+    clip: {fileID: 8300000, guid: 7de15922ec920c1409a8a7dac21607d1, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Big Dragon-1
+    type: 0
+    clip: {fileID: 8300000, guid: 164a0f32dc257694f87a094ed257856d, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Big Dragon-2
+    type: 0
+    clip: {fileID: 8300000, guid: 54be391e203768e4b8a2782af838e3e7, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lava Beetle-1
+    type: 0
+    clip: {fileID: 8300000, guid: 2468b3ea743043343a20059962503d3f, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lava Beetle-2
+    type: 0
+    clip: {fileID: 8300000, guid: bedcc961344ed604caaf1401615519d8, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Small Dragon-2
+    type: 0
+    clip: {fileID: 8300000, guid: f12361a1103eb284eb4684f101a86874, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Small Dragon-3
+    type: 0
+    clip: {fileID: 8300000, guid: 8cde314f87a415c44b15e3100acc90c4, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Water Bloop-1
+    type: 0
+    clip: {fileID: 8300000, guid: a28435c2254dadd4598dff970604da95, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Water Bloop-2
+    type: 0
+    clip: {fileID: 8300000, guid: e67021719bd93384b9c41ff18a04f72e, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Water Bloop-3
+    type: 0
+    clip: {fileID: 8300000, guid: 6f6bf1a311bf1df4e990e9210f2b589d, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Water Bloop-4
+    type: 0
+    clip: {fileID: 8300000, guid: 8f58dc443d801244384e5311c467d000, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
   music:
   - name: Main Theme
     type: 1

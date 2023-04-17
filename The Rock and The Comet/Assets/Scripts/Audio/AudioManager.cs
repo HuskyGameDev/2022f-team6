@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     private Sound[] sounds;
     [SerializeField] Sound[] ambientSounds;
     [SerializeField] Sound[] playerSounds;
+    [SerializeField] Sound[] enemySounds;
     [SerializeField] Sound[] music;
     [SerializeField] Sound[] misc;
 
@@ -23,6 +24,7 @@ public class AudioManager : MonoBehaviour
         //setup all the sounds
         foreach (Sound s in sounds)
         {
+            Debug.Log(s.name);
             //create and assign audio sources to all the sounds
             if (s.type == Sound.SoundType.sfx)
             {
@@ -49,7 +51,7 @@ public class AudioManager : MonoBehaviour
     //this probably isn't effecient but its easy, might optimize it later
     private void combineArrays()
     {
-        sounds = new Sound[ambientSounds.Length + playerSounds.Length + music.Length + misc.Length];
+        sounds = new Sound[ambientSounds.Length + playerSounds.Length + music.Length + misc.Length + enemySounds.Length];
 
         int i = 0;
 
@@ -76,6 +78,12 @@ public class AudioManager : MonoBehaviour
         foreach (Sound s in misc)
         {
             sounds[i + j + k + l] = misc[l++];
+        }
+
+        int m = 0;
+        foreach (Sound s in misc)
+        {
+            sounds[i + j + k + l + m] = enemySounds[m++];
         }
 
     }

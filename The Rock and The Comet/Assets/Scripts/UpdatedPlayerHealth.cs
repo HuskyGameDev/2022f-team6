@@ -226,31 +226,31 @@ public class UpdatedPlayerHealth : MonoBehaviour
         {
             case (0):
                 return GameObject.Find("Spawn0").transform;
-                break;
+                
             case (1):
                 return GameObject.Find("Spawn1").transform;
-                break;
+                
             case (2):
                 return GameObject.Find("Spawn2").transform;
-                break;
+                
             case (3):
                 return GameObject.Find("Spawn3").transform;
-                break;
+                
             case (4):
                 return GameObject.Find("Spawn4").transform;
-                break;
+                
             case (5):
                 return GameObject.Find("Spawn5").transform;
-                break;
+                
             case (6):
                 return GameObject.Find("Spawn6").transform;
-                break;
+                
             case (7):
                 return GameObject.Find("Spawn7").transform;
-                break;
+                
             case (8):
                 return GameObject.Find("Spawn8").transform;
-                break;
+                
         }
         return null;
     }

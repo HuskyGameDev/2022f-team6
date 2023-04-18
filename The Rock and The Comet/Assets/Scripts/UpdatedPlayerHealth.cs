@@ -217,6 +217,14 @@ public class UpdatedPlayerHealth : MonoBehaviour
                 entryPointNum = 8;
                 switcher.caves1();
                 break;
+            case "Entrance8":
+                entryPointNum = 9;
+                switcher.surfaceLevel();
+                break;
+            case "Entrance9":
+                entryPointNum = 10;
+                switcher.surfaceLevel();
+                break;
         }
     }
 
@@ -250,6 +258,12 @@ public class UpdatedPlayerHealth : MonoBehaviour
                 
             case (8):
                 return GameObject.Find("Spawn8").transform;
+
+            case (9):
+                return GameObject.Find("Spawn9").transform;
+
+            case (10):
+                return GameObject.Find("Spawn10").transform;
                 
         }
         return null;

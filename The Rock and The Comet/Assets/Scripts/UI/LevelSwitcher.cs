@@ -29,6 +29,11 @@ public class LevelSwitcher : MonoBehaviour
     {
         SceneManager.LoadScene("Crystal Cave Level");
         Time.timeScale = 1;
+    }
 
+    public void credits()
+    {
+        SceneManager.LoadScene("Credits");
+        Time.timeScale = 1;
     }
 }

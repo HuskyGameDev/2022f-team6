@@ -6,6 +6,7 @@ using UnityEngine.Audio;
 public class EnvironmentalSFX : MonoBehaviour
 {
     [SerializeField] float soundTickSpeed = 5;
+    [SerializeField] bool isEnabled = false;
 
     private AudioManager audioManager;
 
@@ -15,10 +16,13 @@ public class EnvironmentalSFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioManager = GetComponent<AudioManager>();
+        if (isEnabled)
+        {
+            audioManager = GetComponent<AudioManager>();
 
-        InvokeRepeating("tickCounters", 0, 1);
-        InvokeRepeating("tickSounds", 0, soundTickSpeed);
+            InvokeRepeating("tickCounters", 0, 1);
+            InvokeRepeating("tickSounds", 0, soundTickSpeed);
+        }
     }
 
     //attempts to randomly play some sounds

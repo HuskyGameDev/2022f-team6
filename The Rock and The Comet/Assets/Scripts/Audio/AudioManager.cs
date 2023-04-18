@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     private Sound[] sounds;
     [SerializeField] Sound[] ambientSounds;
     [SerializeField] Sound[] playerSounds;
+    [SerializeField] Sound[] enemySounds;
     [SerializeField] Sound[] music;
     [SerializeField] Sound[] misc;
 
@@ -23,6 +24,7 @@ public class AudioManager : MonoBehaviour
         //setup all the sounds
         foreach (Sound s in sounds)
         {
+            Debug.Log(s.name);
             //create and assign audio sources to all the sounds
             if (s.type == Sound.SoundType.sfx)
             {
@@ -49,7 +51,7 @@ public class AudioManager : MonoBehaviour
     //this probably isn't effecient but its easy, might optimize it later
     private void combineArrays()
     {
-        sounds = new Sound[ambientSounds.Length + playerSounds.Length + music.Length + misc.Length];
+        sounds = new Sound[ambientSounds.Length + playerSounds.Length + music.Length + misc.Length + enemySounds.Length];
 
         int i = 0;
 
@@ -78,6 +80,12 @@ public class AudioManager : MonoBehaviour
             sounds[i + j + k + l] = misc[l++];
         }
 
+        int m = 0;
+        foreach (Sound s in enemySounds)
+        {
+            sounds[i + j + k + l + m] = enemySounds[m++];
+        }
+
     }
 
     //stops music
@@ -87,6 +95,25 @@ public class AudioManager : MonoBehaviour
         {
             musicSource.Stop();
         }
+    }
+
+    //plays a sound on a specified audio source
+    public void playSoundOn(String audioName, AudioSource audioSource)
+    {
+        ifNameNone(audioName);
+
+        Sound sound = null;
+        sound = Array.Find(sounds, sound => sound.name == audioName);
+
+        if (sound != null)
+        {
+            //set the audio source to play whatever sound is associated with the audio name
+            audioSource.clip = sound.clip;
+
+            if (!sound.source.isPlaying)
+                sound.source.Play();
+        }
+        else Debug.LogWarning("Unable to play sound " + audioName + " as it was not found in the given sound files, please check for correct spelling");
     }
 
     //plays a sound based of its name

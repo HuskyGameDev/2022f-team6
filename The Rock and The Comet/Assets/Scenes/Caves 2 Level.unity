@@ -27705,6 +27705,7 @@ GameObject:
   - component: {fileID: 1413556710}
   - component: {fileID: 1413556709}
   - component: {fileID: 1413556711}
+  - component: {fileID: 1413556712}
   m_Layer: 0
   m_Name: Fancy Worm
   m_TagString: Enemy
@@ -27820,6 +27821,26 @@ MonoBehaviour:
   speed: 1
   rightBound: -19
   leftBound: -29
+--- !u!95 &1413556712
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413556707}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 06fe7720e36df8040b2b7f4257c88674, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1432398738
 GameObject:
   m_ObjectHideFlags: 0
@@ -28785,6 +28806,7 @@ GameObject:
   - component: {fileID: 1526054262}
   - component: {fileID: 1526054261}
   - component: {fileID: 1526054263}
+  - component: {fileID: 1526054264}
   m_Layer: 0
   m_Name: Fancy Worm
   m_TagString: Enemy
@@ -28900,6 +28922,26 @@ MonoBehaviour:
   speed: 1
   rightBound: -20
   leftBound: -27
+--- !u!95 &1526054264
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526054259}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 06fe7720e36df8040b2b7f4257c88674, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1553352862
 GameObject:
   m_ObjectHideFlags: 0

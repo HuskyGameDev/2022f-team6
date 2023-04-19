@@ -1202,7 +1202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72858659}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.149999, y: 2.9899998, z: 0}
+  m_LocalPosition: {x: 8.15, y: 4.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5061,6 +5061,7 @@ GameObject:
   - component: {fileID: 447911859}
   - component: {fileID: 447911858}
   - component: {fileID: 447911860}
+  - component: {fileID: 447911861}
   m_Layer: 0
   m_Name: Baby Dragon Guard
   m_TagString: BoxSpot
@@ -5161,6 +5162,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7, y: 0.5}
   m_EdgeRadius: 0
+--- !u!95 &447911861
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447911857}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 277d986e1cfdde146bb55ecd00998293, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &452434159
 GameObject:
   m_ObjectHideFlags: 0
@@ -25116,6 +25137,7 @@ GameObject:
   - component: {fileID: 962891765}
   - component: {fileID: 962891764}
   - component: {fileID: 962891766}
+  - component: {fileID: 962891767}
   m_Layer: 0
   m_Name: Scuttling Plant
   m_TagString: Enemy
@@ -25231,6 +25253,26 @@ MonoBehaviour:
   speed: 1
   rightBound: 7.5
   leftBound: 0
+--- !u!95 &962891767
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 962891762}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 066f1023f768c664a94772f8518b3606, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &966878502
 GameObject:
   m_ObjectHideFlags: 0
@@ -60941,6 +60983,7 @@ GameObject:
   - component: {fileID: 2089979922}
   - component: {fileID: 2089979924}
   - component: {fileID: 2089979925}
+  - component: {fileID: 2089979926}
   m_Layer: 0
   m_Name: Scuttling Plant 3
   m_TagString: Enemy
@@ -61077,6 +61120,26 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &2089979926
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089979920}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 066f1023f768c664a94772f8518b3606, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2094510828
 GameObject:
   m_ObjectHideFlags: 0
@@ -64143,6 +64206,10 @@ PrefabInstance:
       propertyPath: boundBox
       value: 
       objectReference: {fileID: 1051436063}
+    - target: {fileID: 3666122273474068567, guid: 5677d2d0be434ce43b4b82db438a4788, type: 3}
+      propertyPath: minScale
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7697853782366341192, guid: 5677d2d0be434ce43b4b82db438a4788, type: 3}
       propertyPath: m_Name
       value: Player

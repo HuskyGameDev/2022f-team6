@@ -10,7 +10,7 @@ public class UpdatedCameramovement : MonoBehaviour
     public GameObject player;
 
     //For keeping the camera within the level
-    public BoxCollider2D boundBox;
+    public Collider2D boundBox;
     private Vector3 minBounds;
     private Vector3 maxBounds;
     private Camera theCamera;

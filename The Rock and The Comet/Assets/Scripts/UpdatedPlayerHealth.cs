@@ -14,6 +14,9 @@ public class UpdatedPlayerHealth : MonoBehaviour
     [SerializeField] GameObject playerUI;
     [SerializeField] GameObject transition;
     [SerializeField] GameObject transCanvas;
+    public GameObject[] volcanoStory;
+    [SerializeField] GameObject storyCanvas;
+    public static bool storyRan = false;
     public Map map;
     public LevelSwitcher switcher;
 
@@ -39,6 +42,19 @@ public class UpdatedPlayerHealth : MonoBehaviour
         spawnPoint.position = findSpawnPoint(entryPointNum).position;
         Debug.Log(playerPos);
         currentHp = maxHp;
+
+        Debug.Log(storyRan);
+        if(storyCanvas != null)
+        {
+            storyCanvas.SetActive(false);
+        }
+        for(int i = 0; i<volcanoStory.Length; i++)
+        {
+            if (volcanoStory[i] != null)
+            {
+                volcanoStory[i].GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            }
+        }
 
         animator.SetBool("No Damage", true);
         animator.SetBool("1 Damage", false);
@@ -227,15 +243,15 @@ public class UpdatedPlayerHealth : MonoBehaviour
                 break;
             case "Entrance10":
                 entryPointNum = 13;
-                switcher.volcano();
+                StartCoroutine(playStory(volcanoStory[3].GetComponent<Image>()));
                 break;
             case "Entrance11":
                 entryPointNum = 11;
-                switcher.volcano();
+                StartCoroutine(playStory(volcanoStory[3].GetComponent<Image>()));
                 break;
             case "Entrance12":
                 entryPointNum = 12;
-                switcher.volcano();
+                StartCoroutine(playStory(volcanoStory[3].GetComponent<Image>()));
                 break;
             case "Entrance13":
                 entryPointNum = 16;
@@ -248,6 +264,9 @@ public class UpdatedPlayerHealth : MonoBehaviour
             case "Entrance15":
                 entryPointNum = 15;
                 switcher.caves1();
+                break;
+            case "Exit To Credits":
+                switcher.credits();
                 break;
         }
     }
@@ -293,5 +312,64 @@ public class UpdatedPlayerHealth : MonoBehaviour
                 
         }
         return null;
+    }
+
+    IEnumerator playStory(Image img)
+    {
+        if (!storyRan)
+        {
+            storyRan = true;
+            storyCanvas.SetActive(true);
+            transCanvas.SetActive(false);
+            //fade in black background and text box
+            for (float i = 0; i <= 1; i += Time.deltaTime)
+            {
+                img.color = new Color(.046f, .0456f, .0566f, i);
+                volcanoStory[0].GetComponent<Image>().color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+            img.color = new Color(.046f, .0456f, .0566f, 1);
+            volcanoStory[0].GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(1.2f);
+            //first text fades in
+            for (float i = 0; i <= 1; i += Time.deltaTime)
+            {
+                volcanoStory[1].GetComponent<Image>().color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+            volcanoStory[1].GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(5);
+
+            //first text fades out
+            for (float i = 1; i >= 0; i -= Time.deltaTime)
+            {
+                volcanoStory[1].GetComponent<Image>().color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+            volcanoStory[1].GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            yield return new WaitForSeconds(1.2f);
+
+            //second text fades in
+            for (float i = 0; i <= 1; i += Time.deltaTime)
+            {
+                volcanoStory[2].GetComponent<Image>().color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+            volcanoStory[2].GetComponent<Image>().color = new Color(1, 1, 1, 1);
+            yield return new WaitForSeconds(5);
+
+            //second text fades out (with background)
+            for (float i = 1; i >= 0; i -= Time.deltaTime)
+            {
+                volcanoStory[2].GetComponent<Image>().color = new Color(1, 1, 1, i);
+                volcanoStory[0].GetComponent<Image>().color = new Color(1, 1, 1, i);
+                yield return null;
+            }
+            volcanoStory[2].GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            volcanoStory[0].GetComponent<Image>().color = new Color(1, 1, 1, 0);
+            yield return new WaitForSeconds(1.2f);
+        }
+        //start volcano level
+        switcher.volcano();
     }
 }

@@ -225,6 +225,30 @@ public class UpdatedPlayerHealth : MonoBehaviour
                 entryPointNum = 10;
                 switcher.surfaceLevel();
                 break;
+            case "Entrance10":
+                entryPointNum = 13;
+                switcher.volcano();
+                break;
+            case "Entrance11":
+                entryPointNum = 11;
+                switcher.volcano();
+                break;
+            case "Entrance12":
+                entryPointNum = 12;
+                switcher.volcano();
+                break;
+            case "Entrance13":
+                entryPointNum = 16;
+                switcher.crystalCaves();
+                break;
+            case "Entrance14":
+                entryPointNum = 14;
+                switcher.surfaceLevel();
+                break;
+            case "Entrance15":
+                entryPointNum = 15;
+                switcher.caves1();
+                break;
         }
     }
 
@@ -233,37 +257,39 @@ public class UpdatedPlayerHealth : MonoBehaviour
         switch (i)
         {
             case (0):
-                return GameObject.Find("Spawn0").transform;
-                
+                return GameObject.Find("Spawn0").transform;               
             case (1):
-                return GameObject.Find("Spawn1").transform;
-                
+                return GameObject.Find("Spawn1").transform;                
             case (2):
-                return GameObject.Find("Spawn2").transform;
-                
+                return GameObject.Find("Spawn2").transform;                
             case (3):
-                return GameObject.Find("Spawn3").transform;
-                
+                return GameObject.Find("Spawn3").transform;                
             case (4):
-                return GameObject.Find("Spawn4").transform;
-                
+                return GameObject.Find("Spawn4").transform;                
             case (5):
-                return GameObject.Find("Spawn5").transform;
-                
+                return GameObject.Find("Spawn5").transform;                
             case (6):
-                return GameObject.Find("Spawn6").transform;
-                
+                return GameObject.Find("Spawn6").transform;                
             case (7):
-                return GameObject.Find("Spawn7").transform;
-                
+                return GameObject.Find("Spawn7").transform;                
             case (8):
                 return GameObject.Find("Spawn8").transform;
-
             case (9):
                 return GameObject.Find("Spawn9").transform;
-
             case (10):
                 return GameObject.Find("Spawn10").transform;
+            case (11):
+                return GameObject.Find("Spawn11").transform;
+            case (12):
+                return GameObject.Find("Spawn12").transform;
+            case (13):
+                return GameObject.Find("Spawn13").transform;
+            case (14):
+                return GameObject.Find("Spawn14").transform;
+            case (15):
+                return GameObject.Find("Spawn15").transform;
+            case (16):
+                return GameObject.Find("Spawn16").transform;
                 
         }
         return null;

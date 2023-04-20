@@ -47,6 +47,7 @@ public class SplashText : MonoBehaviour
                 splash[0].GetComponent<Image>().color = new Color(.046f, .0456f, .0566f, i);
                 yield return null;
             }
+            splash[0].GetComponent<Image>().color = new Color(.046f, .0456f, .0566f, 1);
             for (float i = 0; i <= 1; i += Time.deltaTime)
             {
                 splash[1].GetComponent<Image>().color = new Color(1, 1, 1, i);

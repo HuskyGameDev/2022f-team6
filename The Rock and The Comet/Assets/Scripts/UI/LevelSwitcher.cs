@@ -31,6 +31,12 @@ public class LevelSwitcher : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void volcano()
+    {
+        SceneManager.LoadScene("Volcano Level");
+        Time.timeScale = 1;
+    }
+
     public void credits()
     {
         SceneManager.LoadScene("Credits");

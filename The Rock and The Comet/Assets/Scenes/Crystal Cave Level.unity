@@ -4441,7 +4441,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -32511,7 +32511,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 29
-      m_TileSpriteIndex: 29
+      m_TileSpriteIndex: 30
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -32532,16 +32532,6 @@ Tilemap:
       serializedVersion: 2
       m_TileIndex: 33
       m_TileSpriteIndex: 33
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 1, y: 15, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 29
-      m_TileSpriteIndex: 29
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -32637,7 +32627,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 377ec10e110f7ec40b2850d78939ae35, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -32708,10 +32698,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
-    m_Data: {fileID: -699998826, guid: 52a939c96c7e6004c8ab82ed214cdaba, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -699998826, guid: 52a939c96c7e6004c8ab82ed214cdaba, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 21300000, guid: 68e6926ddba486c4abc8fdce9cbdf87d, type: 3}
   - m_RefCount: 4
@@ -32721,7 +32711,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: cd1c66a1726349e4db5db7e701bea253, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 14
+  - m_RefCount: 13
     m_Data:
       e00: 1
       e01: 0
@@ -32740,7 +32730,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 14
+  - m_RefCount: 13
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -33073,6 +33063,7 @@ GameObject:
   - component: {fileID: 1291005217}
   - component: {fileID: 1291005216}
   - component: {fileID: 1291005218}
+  - component: {fileID: 1291005219}
   m_Layer: 0
   m_Name: Water Slime
   m_TagString: Enemy
@@ -33193,6 +33184,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1291005219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291005214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  rightBound: -28
+  leftBound: -36
 --- !u!1 &1296904290
 GameObject:
   m_ObjectHideFlags: 0
@@ -43742,6 +43748,7 @@ GameObject:
   - component: {fileID: 1526054262}
   - component: {fileID: 1526054261}
   - component: {fileID: 1526054263}
+  - component: {fileID: 1526054264}
   m_Layer: 0
   m_Name: Fancy Worm
   m_TagString: Enemy
@@ -43862,6 +43869,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1526054264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526054259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  rightBound: 5
+  leftBound: -1
 --- !u!1 &1587160551
 GameObject:
   m_ObjectHideFlags: 0
@@ -43873,6 +43895,8 @@ GameObject:
   - component: {fileID: 1587160555}
   - component: {fileID: 1587160554}
   - component: {fileID: 1587160553}
+  - component: {fileID: 1587160557}
+  - component: {fileID: 1587160556}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -43915,8 +43939,8 @@ MonoBehaviour:
   - name: Cave Ambience
     type: 0
     clip: {fileID: 8300000, guid: 32e1ea0859ea22647a3943d826119ed3, type: 3}
-    volume: 1
-    loop: 0
+    volume: 0.25
+    loop: 1
     source: {fileID: 0}
   - name: Lava Ambience
     type: 0
@@ -43927,106 +43951,106 @@ MonoBehaviour:
   - name: Water Drip
     type: 0
     clip: {fileID: 8300000, guid: f1c0cc3df36dab74eb71d924f6eb0ced, type: 3}
-    volume: 1
+    volume: 0.15
     loop: 0
     source: {fileID: 0}
   playerSounds:
   - name: Quartz Landing
     type: 0
     clip: {fileID: 8300000, guid: 555ab7eb5c0beb74c8acf4b67c4fec33, type: 3}
-    volume: 1
+    volume: 0.45
     loop: 0
     source: {fileID: 0}
   - name: Quartz Rolling
     type: 0
     clip: {fileID: 8300000, guid: 76c31438ab0f3d04e8f08231759efda0, type: 3}
-    volume: 1
+    volume: 0.45
     loop: 1
     source: {fileID: 0}
   - name: Gold Landing
     type: 0
     clip: {fileID: 8300000, guid: 287325eef74c4c24c80e57e51ecd7590, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Rolling
     type: 0
     clip: {fileID: 8300000, guid: 263a2f954e8b8e04281d3b2f530415b6, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 1
     source: {fileID: 0}
   - name: Stone Rolling
     type: 0
     clip: {fileID: 8300000, guid: 86cd28ada72d0514198d9924b2351d0c, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 1
     source: {fileID: 0}
   - name: Stone Landing
     type: 0
     clip: {fileID: 8300000, guid: 3ff8397572019484cb03bbf2c03af523, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Falling
     type: 0
     clip: {fileID: 8300000, guid: 1052006c7ac304045a25afef8022d98e, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 1
     source: {fileID: 0}
   - name: Player Damage
     type: 0
     clip: {fileID: 8300000, guid: 9fc3e6f17c4fc5340ae3bcc37f43a4ae, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Player Death
     type: 0
     clip: {fileID: 8300000, guid: 4850bffb221b8f84985abb83aa60f06b, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Player Transformation
     type: 0
     clip: {fileID: 8300000, guid: 4eb871afe077b7e469e46c767f0b84b8, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Squeeze
     type: 0
     clip: {fileID: 8300000, guid: 05fa352e12f968a4180f048b6ccb58dc, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Grow
     type: 0
     clip: {fileID: 8300000, guid: 91ef021eacf8b5d4e8d821e66d7a9882, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Shrink
     type: 0
     clip: {fileID: 8300000, guid: 5ef619129e7b89341a2317d75e0fd25c, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Jump-1
     type: 0
     clip: {fileID: 8300000, guid: 107c04b816163b74e8ca4c9be5c2e3ff, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Jump-2
     type: 0
     clip: {fileID: 8300000, guid: 4e5156f8f79fa0841b3a8e6a11621363, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   enemySounds:
   - name: Scuttle-1
     type: 0
     clip: {fileID: 8300000, guid: 673f821ffc88380409b4c8026cd5d397, type: 3}
-    volume: 0.2
-    loop: 0
+    volume: 0.15
+    loop: 1
     source: {fileID: 0}
   - name: Scuttle-2
     type: 0
@@ -44073,8 +44097,8 @@ MonoBehaviour:
   - name: Water Bloop-1
     type: 0
     clip: {fileID: 8300000, guid: a28435c2254dadd4598dff970604da95, type: 3}
-    volume: 0.2
-    loop: 0
+    volume: 0.15
+    loop: 1
     source: {fileID: 0}
   - name: Water Bloop-2
     type: 0
@@ -44085,8 +44109,8 @@ MonoBehaviour:
   - name: Water Bloop-3
     type: 0
     clip: {fileID: 8300000, guid: 6f6bf1a311bf1df4e990e9210f2b589d, type: 3}
-    volume: 0.2
-    loop: 0
+    volume: 0.15
+    loop: 1
     source: {fileID: 0}
   - name: Water Bloop-4
     type: 0
@@ -44213,6 +44237,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1587160556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587160551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f2f365943213044961e9be9a931682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundTickSpeed: 5
+  isEnabled: 1
+--- !u!114 &1587160557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587160551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0482f28166fb54c896b56e9d1d5162, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundTickSpeed: 5
 --- !u!1 &1606656139
 GameObject:
   m_ObjectHideFlags: 0
@@ -44225,6 +44276,7 @@ GameObject:
   - component: {fileID: 1606656142}
   - component: {fileID: 1606656141}
   - component: {fileID: 1606656143}
+  - component: {fileID: 1606656144}
   m_Layer: 0
   m_Name: Fancy Worm (1)
   m_TagString: Enemy
@@ -44345,6 +44397,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1606656144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606656139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  rightBound: 23
+  leftBound: 18
 --- !u!1 &1617699863
 GameObject:
   m_ObjectHideFlags: 0
@@ -53074,6 +53141,7 @@ GameObject:
   - component: {fileID: 1839603477}
   - component: {fileID: 1839603476}
   - component: {fileID: 1839603478}
+  - component: {fileID: 1839603479}
   m_Layer: 0
   m_Name: Water Slime (1)
   m_TagString: Enemy
@@ -53194,6 +53262,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1839603479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839603474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  rightBound: -13.5
+  leftBound: -19
 --- !u!1 &1842534157
 GameObject:
   m_ObjectHideFlags: 0

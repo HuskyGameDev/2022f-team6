@@ -44729,6 +44729,7 @@ GameObject:
   - component: {fileID: 1587160555}
   - component: {fileID: 1587160554}
   - component: {fileID: 1587160553}
+  - component: {fileID: 1587160556}
   m_Layer: 0
   m_Name: Audio Manager
   m_TagString: Untagged
@@ -44771,8 +44772,8 @@ MonoBehaviour:
   - name: Cave Ambience
     type: 0
     clip: {fileID: 8300000, guid: 32e1ea0859ea22647a3943d826119ed3, type: 3}
-    volume: 1
-    loop: 0
+    volume: 0.25
+    loop: 1
     source: {fileID: 0}
   - name: Lava Ambience
     type: 0
@@ -44783,98 +44784,98 @@ MonoBehaviour:
   - name: Water Drip
     type: 0
     clip: {fileID: 8300000, guid: f1c0cc3df36dab74eb71d924f6eb0ced, type: 3}
-    volume: 1
+    volume: 0.15
     loop: 0
     source: {fileID: 0}
   playerSounds:
   - name: Quartz Landing
     type: 0
     clip: {fileID: 8300000, guid: 555ab7eb5c0beb74c8acf4b67c4fec33, type: 3}
-    volume: 1
+    volume: 0.45
     loop: 0
     source: {fileID: 0}
   - name: Quartz Rolling
     type: 0
     clip: {fileID: 8300000, guid: 76c31438ab0f3d04e8f08231759efda0, type: 3}
-    volume: 1
+    volume: 0.45
     loop: 1
     source: {fileID: 0}
   - name: Gold Landing
     type: 0
     clip: {fileID: 8300000, guid: 287325eef74c4c24c80e57e51ecd7590, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Rolling
     type: 0
     clip: {fileID: 8300000, guid: 263a2f954e8b8e04281d3b2f530415b6, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 1
     source: {fileID: 0}
   - name: Stone Rolling
     type: 0
     clip: {fileID: 8300000, guid: 86cd28ada72d0514198d9924b2351d0c, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 1
     source: {fileID: 0}
   - name: Stone Landing
     type: 0
     clip: {fileID: 8300000, guid: 3ff8397572019484cb03bbf2c03af523, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Falling
     type: 0
     clip: {fileID: 8300000, guid: 1052006c7ac304045a25afef8022d98e, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 1
     source: {fileID: 0}
   - name: Player Damage
     type: 0
     clip: {fileID: 8300000, guid: 9fc3e6f17c4fc5340ae3bcc37f43a4ae, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Player Death
     type: 0
     clip: {fileID: 8300000, guid: 4850bffb221b8f84985abb83aa60f06b, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Player Transformation
     type: 0
     clip: {fileID: 8300000, guid: 4eb871afe077b7e469e46c767f0b84b8, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Squeeze
     type: 0
     clip: {fileID: 8300000, guid: 05fa352e12f968a4180f048b6ccb58dc, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Grow
     type: 0
     clip: {fileID: 8300000, guid: 91ef021eacf8b5d4e8d821e66d7a9882, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Shrink
     type: 0
     clip: {fileID: 8300000, guid: 5ef619129e7b89341a2317d75e0fd25c, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Jump-1
     type: 0
     clip: {fileID: 8300000, guid: 107c04b816163b74e8ca4c9be5c2e3ff, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Jump-2
     type: 0
     clip: {fileID: 8300000, guid: 4e5156f8f79fa0841b3a8e6a11621363, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   enemySounds:
@@ -44887,8 +44888,8 @@ MonoBehaviour:
   - name: Scuttle-2
     type: 0
     clip: {fileID: 8300000, guid: 7de15922ec920c1409a8a7dac21607d1, type: 3}
-    volume: 0.2
-    loop: 0
+    volume: 0.15
+    loop: 1
     source: {fileID: 0}
   - name: Big Dragon-1
     type: 0
@@ -45069,6 +45070,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1587160556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587160551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f2f365943213044961e9be9a931682, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundTickSpeed: 5
+  isEnabled: 1
 --- !u!1 &1606656139
 GameObject:
   m_ObjectHideFlags: 0

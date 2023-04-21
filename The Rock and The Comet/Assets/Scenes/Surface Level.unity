@@ -57908,105 +57908,105 @@ MonoBehaviour:
   - name: Quartz Landing
     type: 0
     clip: {fileID: 8300000, guid: 555ab7eb5c0beb74c8acf4b67c4fec33, type: 3}
-    volume: 1
+    volume: 0.45
     loop: 0
     source: {fileID: 0}
   - name: Quartz Rolling
     type: 0
     clip: {fileID: 8300000, guid: 76c31438ab0f3d04e8f08231759efda0, type: 3}
-    volume: 1
+    volume: 0.45
     loop: 1
     source: {fileID: 0}
   - name: Gold Landing
     type: 0
     clip: {fileID: 8300000, guid: 287325eef74c4c24c80e57e51ecd7590, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Rolling
     type: 0
     clip: {fileID: 8300000, guid: 263a2f954e8b8e04281d3b2f530415b6, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 1
     source: {fileID: 0}
   - name: Stone Rolling
     type: 0
     clip: {fileID: 8300000, guid: 86cd28ada72d0514198d9924b2351d0c, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 1
     source: {fileID: 0}
   - name: Stone Landing
     type: 0
     clip: {fileID: 8300000, guid: 3ff8397572019484cb03bbf2c03af523, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Falling
     type: 0
     clip: {fileID: 8300000, guid: 1052006c7ac304045a25afef8022d98e, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 1
     source: {fileID: 0}
   - name: Player Damage
     type: 0
     clip: {fileID: 8300000, guid: 9fc3e6f17c4fc5340ae3bcc37f43a4ae, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Player Death
     type: 0
     clip: {fileID: 8300000, guid: 4850bffb221b8f84985abb83aa60f06b, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Player Transformation
     type: 0
     clip: {fileID: 8300000, guid: 4eb871afe077b7e469e46c767f0b84b8, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Squeeze
     type: 0
     clip: {fileID: 8300000, guid: 05fa352e12f968a4180f048b6ccb58dc, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Grow
     type: 0
     clip: {fileID: 8300000, guid: 91ef021eacf8b5d4e8d821e66d7a9882, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Gold Shrink
     type: 0
     clip: {fileID: 8300000, guid: 5ef619129e7b89341a2317d75e0fd25c, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Jump-1
     type: 0
     clip: {fileID: 8300000, guid: 107c04b816163b74e8ca4c9be5c2e3ff, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   - name: Jump-2
     type: 0
     clip: {fileID: 8300000, guid: 4e5156f8f79fa0841b3a8e6a11621363, type: 3}
-    volume: 1
+    volume: 0.35
     loop: 0
     source: {fileID: 0}
   enemySounds:
   - name: Scuttle-1
     type: 0
     clip: {fileID: 8300000, guid: 673f821ffc88380409b4c8026cd5d397, type: 3}
-    volume: 0.2
-    loop: 0
+    volume: 0.13
+    loop: 1
     source: {fileID: 0}
   - name: Scuttle-2
     type: 0
     clip: {fileID: 8300000, guid: 7de15922ec920c1409a8a7dac21607d1, type: 3}
-    volume: 0.2
-    loop: 0
+    volume: 0.13
+    loop: 1
     source: {fileID: 0}
   - name: Big Dragon-1
     type: 0

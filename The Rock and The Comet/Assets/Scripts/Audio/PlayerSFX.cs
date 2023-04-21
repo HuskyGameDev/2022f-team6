@@ -53,7 +53,7 @@ public class PlayerSFX : MonoBehaviour
         }
         else if (formSwitching.inPum)
         {
-            //audioManager.playSound("Pumice Landing"); uncomment this when there is a pumice land sound added
+            audioManager.playSound("Stone Landing"); 
         }
     }
 
@@ -130,12 +130,12 @@ public class PlayerSFX : MonoBehaviour
         if (!pumiceRolling && formSwitching.inPum && movement.movingHorizontal() && movement.checkGrounded())
         {
             stopRolls();
-            audioManager.playSound("Pumice Rolling");
+            audioManager.playSound("Stone Rolling");
             quartzRolling = true;
         }
         else if (!movement.movingHorizontal() || !movement.checkGrounded())
         {
-            audioManager.stopSound("Pumice Rolling");
+            audioManager.stopSound("Stone Rolling");
             quartzRolling = false;
         }
     }

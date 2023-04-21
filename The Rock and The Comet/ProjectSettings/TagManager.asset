@@ -18,6 +18,7 @@ TagManager:
   - PowerUp
   - Room
   - Switch
+  - Music
   layers:
   - Default
   - TransparentFX

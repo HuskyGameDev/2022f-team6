@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlatformBreak : MonoBehaviour
 {
-
-    public float fallTime;
+    public float fallTime = 2;
     public float respawnTime;
     public GameObject platformPrefab;
+    public GameObject dragon;
 
     private bool isFalling = false;
     private Vector3 respawnPosition;
@@ -30,13 +30,11 @@ public class PlatformBreak : MonoBehaviour
         {
 
             // Start falling after a delay
-            Debug.Log("Respawn");
+            Debug.Log("fall");
             Invoke("Fall", fallTime);
-
         }
-        else if (isFalling)
+        else if (collision.gameObject.tag == "Enemy")
         {
-
             Destroy(gameObject);
         }
     }
@@ -44,25 +42,10 @@ public class PlatformBreak : MonoBehaviour
     private void Fall()
     {
         isFalling = true;
-        Invoke("Respawn", respawnTime);
+
         // Enable gravity and make the platform fall
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
 
     }
 
-    private void Respawn()
-    {
-        Debug.Log("Respawn");
-
-        isFalling = false;
-
-        // Reset the platform position
-        transform.position = respawnPosition;
-
-        // Instantiate a new platform object at the original position
-        GameObject newPlatform = Instantiate(platformPrefab, respawnPosition, Quaternion.identity);
-
-        // Reset the isFalling variable on the new platform object
-        newPlatform.GetComponent<PlatformBreak>().isFalling = false;
-    }
 }

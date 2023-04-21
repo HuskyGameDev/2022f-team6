@@ -13,25 +13,25 @@ public class Boss : MonoBehaviour
     public Vector3 fireballPosition;
 
     public GameObject fireballPrefab;
+    public GameObject dragon;
+    public GameObject fallPlatform;
     public Transform target;
+    
 
     private float timer = 0f;
-    
-    
 
     public BossHealth healthbar;
 
     private void Start()
     {
+        dragon.SetActive(false);
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        ContactPoint2D contact = collision.contacts[0];
-        if (contact.normal.y>.5)
-        {
+        if (collision.gameObject.Equals(fallPlatform)) { 
             TakeDamage();
             if (currentHealth <= 0)
             {
@@ -43,13 +43,12 @@ public class Boss : MonoBehaviour
 
     void Update()
     {
-
-        timer += Time.deltaTime;
-        if (timer > shootInterval)
-        {
+       timer += Time.deltaTime;
+       if (timer > shootInterval)
+       {
             ShootProjectile();
             timer = 0f;
-        }
+       }
     }
 
     void ShootProjectile()
@@ -70,6 +69,5 @@ public class Boss : MonoBehaviour
     void TakeDamage()
     {
         currentHealth -= damage;
-        healthbar.SetHealth(currentHealth);
     }
 }

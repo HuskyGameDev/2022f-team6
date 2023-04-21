@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 0cc17140b10f80f4891ba42dc4037b4b
+  - enabled: 1
+    path: Assets/Scenes/Volcano Level.unity
+    guid: 7dea70ae2e6766b479aa250d59f724a8
   - enabled: 0
     path: Assets/Scenes/Level 0.1.unity
     guid: c3eb2d149c726144d905bfae89cbf543

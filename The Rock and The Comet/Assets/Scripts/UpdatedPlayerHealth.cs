@@ -17,6 +17,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
     public Map map;
     public LevelSwitcher switcher;
     public AudioSource bgm;
+    public AudioSource bossMusic;
 
     //set in editor
     [SerializeField] int maxHp = 3;
@@ -34,6 +35,10 @@ public class UpdatedPlayerHealth : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(bossMusic != null)
+        {
+            bossMusic.volume = 0;
+        }
         playerPos = GameObject.FindGameObjectWithTag("Player").transform;
         playerPos.position = findSpawnPoint(entryPointNum).position;
         spawnPoint = GameObject.FindGameObjectWithTag("Respawn").transform;
@@ -45,7 +50,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
         animator.SetBool("1 Damage", false);
         animator.SetBool("2 Damage", false);
         StartCoroutine(Fade(false, transition.GetComponent<Image>(), null));
-        bgm.Play();
+        StartCoroutine(fadeMusic(true, bgm));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -81,6 +86,17 @@ public class UpdatedPlayerHealth : MonoBehaviour
             StartCoroutine(Fade(true, transition.GetComponent<Image>(), collision));
             StartCoroutine(fadeMusic(true, bgm));
             setSpawnPoint(collision);
+        }
+        else if (collision.gameObject.CompareTag("Music"))
+        {
+            if(collision.gameObject.name == "Music Stop")
+            {
+                StartCoroutine(fadeMusic(false, bgm));
+            }
+            else if (collision.gameObject.name == "Boss Music Start")
+            {
+                StartCoroutine(fadeMusic(true, bossMusic));
+            }
         }
     }
 
@@ -307,7 +323,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
         {
             for (float i = 0; i <= 1; i += Time.deltaTime)
             {
-                audio.volume = Mathf.Lerp(audio.volume, 0, i);
+                audio.volume = i;
                 yield return null;
             }
         }
@@ -315,7 +331,7 @@ public class UpdatedPlayerHealth : MonoBehaviour
         {
             for (float i = 1; i >= 0; i-= Time.deltaTime)
             {
-                audio.volume = Mathf.Lerp(audio.volume, 1, i);
+                audio.volume = i;
                 yield return null;
             }
         }

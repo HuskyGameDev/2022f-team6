@@ -33073,6 +33073,7 @@ GameObject:
   - component: {fileID: 1291005217}
   - component: {fileID: 1291005216}
   - component: {fileID: 1291005218}
+  - component: {fileID: 1291005219}
   m_Layer: 0
   m_Name: Water Slime
   m_TagString: Enemy
@@ -33193,6 +33194,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1291005219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291005214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 4
+  rightBound: -28
+  leftBound: -36
 --- !u!1 &1296904290
 GameObject:
   m_ObjectHideFlags: 0
@@ -43742,6 +43758,7 @@ GameObject:
   - component: {fileID: 1526054262}
   - component: {fileID: 1526054261}
   - component: {fileID: 1526054263}
+  - component: {fileID: 1526054264}
   m_Layer: 0
   m_Name: Fancy Worm
   m_TagString: Enemy
@@ -43862,6 +43879,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1526054264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1526054259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  rightBound: 5
+  leftBound: -1
 --- !u!1 &1587160551
 GameObject:
   m_ObjectHideFlags: 0
@@ -44225,6 +44257,7 @@ GameObject:
   - component: {fileID: 1606656142}
   - component: {fileID: 1606656141}
   - component: {fileID: 1606656143}
+  - component: {fileID: 1606656144}
   m_Layer: 0
   m_Name: Fancy Worm (1)
   m_TagString: Enemy
@@ -44345,6 +44378,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1606656144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1606656139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  rightBound: 23
+  leftBound: 18
 --- !u!1 &1617699863
 GameObject:
   m_ObjectHideFlags: 0
@@ -53074,6 +53122,7 @@ GameObject:
   - component: {fileID: 1839603477}
   - component: {fileID: 1839603476}
   - component: {fileID: 1839603478}
+  - component: {fileID: 1839603479}
   m_Layer: 0
   m_Name: Water Slime (1)
   m_TagString: Enemy
@@ -53194,6 +53243,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1839603479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839603474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95fef6aea6d5d174abfd6a9bd1ea0af9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  rightBound: -13.5
+  leftBound: -19
 --- !u!1 &1842534157
 GameObject:
   m_ObjectHideFlags: 0
